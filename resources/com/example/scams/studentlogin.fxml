@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="300.0" prefWidth="300.0" style="-fx-background-color: #5F9EA0;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.scams.studentlogin">
+    <children>
+        <AnchorPane layoutX="-1.0" layoutY="-3.0" prefHeight="71.0" prefWidth="302.0" style="-fx-background-color: #FAF0E6;">
+            <children>
+                <Label layoutX="99.0" layoutY="15.0" prefHeight="40.0" prefWidth="100.0" text="LOGIN" textAlignment="JUSTIFY">
+                    <font>
+                        <Font name="System Bold" size="28.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+        <Label layoutX="14.0" layoutY="147.0" prefHeight="17.0" prefWidth="69.0" text="Username" />
+        <Label layoutX="17.0" layoutY="184.0" prefHeight="17.0" prefWidth="69.0" text="UserId" />
+        <Label layoutX="13.0" layoutY="239.0" prefHeight="17.0" prefWidth="69.0" text="Password" />
+        <TextField layoutX="137.0" layoutY="143.0" />
+        <TextField layoutX="132.0" layoutY="180.0" />
+        <TextField layoutX="138.0" layoutY="234.0" />
+    </children>
+</AnchorPane>
+

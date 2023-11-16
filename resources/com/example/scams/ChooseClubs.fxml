@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="300.0" prefWidth="300.0" style="-fx-background-color: #5F9EA0;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.scams.EditClub">
+    <children>
+        <AnchorPane layoutX="-1.0" layoutY="-3.0" prefHeight="71.0" prefWidth="302.0" style="-fx-background-color: #FAF0E6;">
+            <children>
+                <Label layoutX="32.0" layoutY="12.0" prefHeight="40.0" prefWidth="285.0" text="Choose Club " textAlignment="JUSTIFY">
+                    <font>
+                        <Font name="System Bold" size="31.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+        <Button layoutX="192.0" layoutY="86.0" mnemonicParsing="false" text="Button" />
+        <Button layoutX="69.0" layoutY="149.0" mnemonicParsing="false" text="Button" />
+        <Button layoutX="192.0" layoutY="149.0" mnemonicParsing="false" text="Button" />
+        <Button layoutX="192.0" layoutY="217.0" mnemonicParsing="false" text="Button" />
+        <Button layoutX="69.0" layoutY="217.0" mnemonicParsing="false" text="Button" />
+        <Button layoutX="76.0" layoutY="86.0" mnemonicParsing="false" text="Button" />
+    </children>
+
+
+
+</AnchorPane>
