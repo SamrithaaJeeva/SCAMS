@@ -12,7 +12,7 @@
                 <AnchorPane layoutX="113.0" layoutY="104.0" prefHeight="0.0" prefWidth="101.0" />
                   <ImageView fitHeight="98.0" fitWidth="170.0" pickOnBounds="true" preserveRatio="true">
                       <image>
-                          <Image url="C:\Users\bmadh\IdeaProjects\SCAMS\SCAMS\logo.jpeg" />
+                          <Image url="" />
                       </image>
                   </ImageView>
             </children>
