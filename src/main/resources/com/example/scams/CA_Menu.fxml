@@ -60,42 +60,37 @@
             </ImageView>
             <VBox layoutX="-4.0" layoutY="105.0" prefHeight="359.0" prefWidth="212.0">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="45.0" prefWidth="219.0" style="-fx-background-color: black;" text="CREATE CLUB" textFill="#f4acb7">
+                  <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="212.0" style="-fx-background-color: black;" text="CREATE CLUB" textFill="#f4acb7">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </Button>
-                  <Button mnemonicParsing="false" prefHeight="45.0" prefWidth="216.0" style="-fx-background-color: black;" text="EDIT CLUB" textFill="#f4acb7">
+                  <Button mnemonicParsing="false" prefHeight="52.0" prefWidth="212.0" style="-fx-background-color: black;" text="EDIT CLUB" textFill="#f4acb7">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </Button>
-                  <Button mnemonicParsing="false" prefHeight="45.0" prefWidth="211.0" style="-fx-background-color: black;" text="DELETE CLUB" textFill="#f4acb7">
+                  <Button mnemonicParsing="false" prefHeight="52.0" prefWidth="211.0" style="-fx-background-color: black;" text="DELETE CLUB" textFill="#f4acb7">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </Button>
-                  <Button mnemonicParsing="false" prefHeight="45.0" prefWidth="219.0" style="-fx-background-color: black;" text="VIEW CLUBS" textFill="#f4acb7">
+                  <Button mnemonicParsing="false" prefHeight="52.0" prefWidth="219.0" style="-fx-background-color: black;" text="VIEW CLUBS" textFill="#f4acb7">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </Button>
-                  <Button mnemonicParsing="false" prefHeight="45.0" prefWidth="216.0" style="-fx-background-color: black;" text="SCHEDULE EVENTS" textFill="#f4acb7">
+                  <Button mnemonicParsing="false" prefHeight="52.0" prefWidth="216.0" style="-fx-background-color: black;" text="SCHEDULE EVENTS" textFill="#f4acb7">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </Button>
-                  <Button mnemonicParsing="false" prefHeight="45.0" prefWidth="215.0" style="-fx-background-color: black;" text="SCHEDULE MEETINGS" textFill="#f4acb7">
+                  <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="212.0" style="-fx-background-color: black;" text="MARK ATTENDANCE" textFill="#f4acb7">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </Button>
-                  <Button mnemonicParsing="false" prefHeight="45.0" prefWidth="213.0" style="-fx-background-color: black;" text="MARK ATTENDANCE" textFill="#f4acb7">
-                     <font>
-                        <Font name="System Bold" size="14.0" />
-                     </font>
-                  </Button>
-                  <Button mnemonicParsing="false" prefHeight="45.0" prefWidth="216.0" style="-fx-background-color: black;" text="EXIT" textFill="#f4acb7">
+                  <Button mnemonicParsing="false" prefHeight="52.0" prefWidth="212.0" style="-fx-background-color: black;" text="EXIT" textFill="#f4acb7">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
