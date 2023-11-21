@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="borderpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="531.0" prefWidth="500.0" style="-fx-border-color: #785b57;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.project.HelloController">
+    <center>
+        <AnchorPane maxWidth="616.0" minWidth="500.0" prefHeight="551.0" prefWidth="561.0" style="-fx-background-color: #F4ACB7;" BorderPane.alignment="CENTER">
+            <children>
+                <VBox layoutX="-8.0" layoutY="-13.0" prefHeight="577.0" prefWidth="250.0" style="-fx-background-color: BLACK; -fx-border-color: #785b57;">
+                    <children>
+                        <VBox minWidth="200.0" style="-fx-border-color: #785b57;">
+                            <VBox.margin>
+                                <Insets top="10.0" />
+                            </VBox.margin>
+                        </VBox>
+                        <ImageView fitHeight="255.0" fitWidth="257.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../../java/com/example/scams/logo.jpeg" />
+                            </image>
+                        </ImageView>
+                        <Button fx:id="openaddWindow" minHeight="0.0" minWidth="200.0" mnemonicParsing="false" onMouseClicked="#openaddWindow" prefHeight="62.0" prefWidth="237.0" style="-fx-background-color: BLACK; -fx-border-width: 2px 0px 2px; -fx-border-color: #785b57;" text="CREATE CLUB PROFILE" textFill="#eb92b8">
+                            <font>
+                                <Font name="Century Gothic Bold" size="17.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="openuddwindow" mnemonicParsing="false" onMouseClicked="#openuddWindow" prefHeight="63.0" prefWidth="242.0" style="-fx-border-width: 0px 0px 2px; -fx-border-color: #785b57; -fx-background-color: black;" text="MANAGE CLUB" textFill="#f29fc2">
+                            <font>
+                                <Font name="Century Gothic Bold" size="17.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="addvctWindow" mnemonicParsing="false" onMouseClicked="#openvctWindow" prefHeight="63.0" prefWidth="237.0" style="-fx-background-color: BLACK; -fx-border-width: 0px 0px 2px; -fx-border-color: #785b57;" text="SCHEDULE MEETINGS" textFill="#f29fc2">
+                            <font>
+                                <Font name="Century Gothic Bold" size="17.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="opendddWindow" mnemonicParsing="false" onMouseClicked="#opendddWindow" prefHeight="62.0" prefWidth="239.0" style="-fx-background-color: black; -fx-border-width: 0px 0px 2px; -fx-border-color: #785b57;" text="SCHEDULE EVENTS" textFill="#f29fc2">
+                            <font>
+                                <Font name="Century Gothic Bold" size="17.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="loadRacedetails" mnemonicParsing="false" onMouseClicked="#openvrlWindow" prefHeight="54.0" prefWidth="239.0" style="-fx-background-color: BLACK; -fx-border-width: 0px 0px 2px; -fx-border-color: #785b57;" text="TRACK ATTENDANCE " textFill="#f29fc2">
+                            <font>
+                                <Font name="Century Gothic Bold" size="17.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </VBox>
+                <AnchorPane layoutX="113.0" layoutY="104.0" prefHeight="0.0" prefWidth="101.0" />
+                <Button layoutX="304.0" layoutY="395.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="169.0" style="-fx-background-color: #947878;" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="19.0" />
+                    </font>
+                </Button>
+                <Button layoutX="305.0" layoutY="282.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="166.0" style="-fx-background-color: #947878;" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="19.0" />
+                    </font>
+                </Button>
+                <Button layoutX="305.0" layoutY="338.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="166.0" style="-fx-background-color: #947878;" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="19.0" />
+                    </font>
+                </Button>
+                <Button layoutX="305.0" layoutY="228.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="165.0" style="-fx-background-color: #947878;" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="19.0" />
+                    </font>
+                </Button>
+                <Button layoutX="305.0" layoutY="166.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="163.0" style="-fx-background-color: #947878;" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="19.0" />
+                    </font>
+                </Button>
+                <Button layoutX="305.0" layoutY="464.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="168.0" style="-fx-background-color: #947878;" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="19.0" />
+                    </font>
+                </Button>
+                <Button fx:id="opendddWindow1" layoutX="243.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#opendddWindow" prefHeight="96.0" prefWidth="258.0" style="-fx-background-color: #F4ACB7; -fx-border-width: 0px 0px 2px; -fx-border-color: #785b57;" text="CHOOSE CLUB">
+                    <font>
+                        <Font name="Bell MT Bold" size="20.0" />
+                    </font>
+                </Button>
+            </children>
+        </AnchorPane>
+    </center>
+</BorderPane>
