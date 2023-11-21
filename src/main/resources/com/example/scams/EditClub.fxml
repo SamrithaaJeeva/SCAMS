@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="borderpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="531.0" prefWidth="500.0" style="-fx-border-color: #785b57;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.scams.Controller">
+    <center>
+        <AnchorPane maxWidth="616.0" minWidth="500.0" prefHeight="529.0" prefWidth="500.0" style="-fx-background-color: #F4ACB7;" BorderPane.alignment="CENTER">
+            <children>
+                <VBox layoutY="-7.0" prefHeight="549.0" prefWidth="155.0" style="-fx-background-color: BLACK; -fx-border-color: #785b57;">
+                    <children>
+                        <VBox minWidth="200.0" style="-fx-border-color: #785b57;">
+                            <VBox.margin>
+                                <Insets top="10.0" />
+                            </VBox.margin>
+                        </VBox>
+
+                        <Button fx:id="openuddwindow" mnemonicParsing="false" prefHeight="49.0" prefWidth="210.0" style="-fx-border-width: 0px 0px 2px; -fx-border-color: #785b57; -fx-background-color: black;" text="MANAGE CLUB" textFill="#f29fc2">
+                            <font>
+                                <Font name="Century Gothic Bold" size="17.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="CreateClubProfileBtn" minHeight="0.0" minWidth="200.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="237.0" style="-fx-background-color: BLACK; -fx-border-width: 2px 0px 2px; -fx-border-color: #785b57;" text="CREATE CLUB PROFILE" textFill="#eb92b8">
+                            <font>
+                                <Font name="Century Gothic Bold" size="17.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="opendddWindow" mnemonicParsing="false" prefHeight="62.0" prefWidth="239.0" style="-fx-background-color: black; -fx-border-width: 0px 0px 2px; -fx-border-color: #785b57;" text="SCHEDULE EVENTS" textFill="#f29fc2">
+                            <font>
+                                <Font name="Century Gothic Bold" size="17.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="loadRacedetails" mnemonicParsing="false" prefHeight="51.0" prefWidth="239.0" style="-fx-background-color: BLACK; -fx-border-width: 0px 0px 2px; -fx-border-color: #785b57;" text="TRACK ATTENDANCE " textFill="#f29fc2">
+                            <font>
+                                <Font name="Century Gothic Bold" size="17.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="addvctWindow" mnemonicParsing="false" prefHeight="63.0" prefWidth="237.0" style="-fx-background-color: BLACK; -fx-border-width: 0px 0px 2px; -fx-border-color: #785b57;" text="SCHEDULE MEETINGS" textFill="#f29fc2">
+                            <font>
+                                <Font name="Century Gothic Bold" size="17.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </VBox>
+                <AnchorPane layoutX="113.0" layoutY="104.0" prefHeight="0.0" prefWidth="101.0" />
+                <AnchorPane layoutX="199.0" layoutY="-8.0" prefHeight="98.0" prefWidth="302.0" style="-fx-background-color: black;">
+                    <children>
+                        <Label layoutX="25.0" layoutY="41.0" prefHeight="28.0" prefWidth="243.0" text="EDIT CLUB PROFILE" textAlignment="CENTER" textFill="#eb92b8">
+                            <font>
+                                <Font name="Century Gothic Bold" size="22.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+                <Label />
+                <Label layoutX="221.0" layoutY="121.0" prefHeight="38.0" prefWidth="150.0" text="Enter Club Name">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Label>
+                <Label layoutX="215.0" layoutY="233.0" prefHeight="38.0" prefWidth="230.0" text="Enter Club Advisor's Name">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Label>
+                <Label layoutX="215.0" layoutY="349.0" prefHeight="38.0" prefWidth="230.0" text="Enter Club Description">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="EditName" layoutX="215.0" layoutY="159.0" prefHeight="26.0" prefWidth="230.0" style="-fx-border-color: black; -fx-background-color: transparent; -fx-border-width: 0 0 1 0;">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="EditAdvisorName" layoutX="215.0" layoutY="287.0" prefHeight="26.0" prefWidth="230.0" style="-fx-border-width: 0 0 1 0; -fx-background-color: transparent; -fx-border-color: black;">
+                    <font>
+                        <Font size="18.0" />
+                    </font></TextField>
+                <TextField fx:id="EditDescription" layoutX="215.0" layoutY="409.0" prefHeight="26.0" prefWidth="230.0" style="-fx-border-width: 0 0 1 0; -fx-background-color: transparent; -fx-border-color: black;">
+                    <font>
+                        <Font size="18.0" />
+                    </font></TextField>
+                <Button layoutX="361.0" layoutY="476.0" mnemonicParsing="false" onAction="#EditClubProfileBtn" prefHeight="40.0" prefWidth="110.0" style="-fx-background-color: black;" text="Submit" textFill="#eb92b8">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Button>
+            </children>
+        </AnchorPane>
+    </center>
+</BorderPane>
