@@ -15,7 +15,7 @@ public class Connector {
         {
             Class.forName(driver);
             Connection c= DriverManager.getConnection(database_url,username,password);
-            System.out.println("Database is succesfully connected");
+            System.out.println("Database is successfully connected");
             return c;
         }
         catch(Exception e)
