@@ -29,7 +29,7 @@
          </font>
       </Label>
       <VBox layoutX="8.0" layoutY="130.0" prefHeight="181.0" prefWidth="184.0" />
-      <Button fx:id="opendddWindow1" layoutX="213.0" mnemonicParsing="false" onMouseClicked="#opendddWindow" prefHeight="99.0" prefWidth="287.0" style="-fx-background-color: #F4ACB7; -fx-border-width: 0px 0px 2px; -fx-border-color: #785b57;" text="REGISTER WITH SCAMS ">
+      <Button fx:id="opendddWindow1" layoutX="213.0" mnemonicParsing="false"  prefHeight="99.0" prefWidth="287.0" style="-fx-background-color: #F4ACB7; -fx-border-width: 0px 0px 2px; -fx-border-color: #785b57;" text="REGISTER WITH SCAMS ">
          <font>
             <Font name="Bell MT Bold" size="20.0" />
          </font>
@@ -39,7 +39,7 @@
          <children>
             <ImageView fitHeight="225.0" fitWidth="207.0" layoutX="8.0" layoutY="133.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../java/com/example/scams/logo.jpeg" />
+                  <Image url="@../../../logo.jpeg" />
                </image>
             </ImageView>
             <Button fx:id="back" layoutX="8.0" layoutY="7.0" mnemonicParsing="false" prefHeight="76.0" prefWidth="131.0" style="-fx-background-color: BLACK;" text="&lt;-----" textFill="#eb92b8">
