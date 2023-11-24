@@ -54,14 +54,14 @@ public class Controller {
         stage.show();
     }
     public void gotoschedulevent(ActionEvent event)throws IOException{
-        Parent root = FXMLLoader.load(getClass().getResource("ScheduleEvents.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("ViewEvents.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene=new Scene(root);
         stage.setScene(scene);
         stage.show();
     }
     public void gotoschedulemeeting(ActionEvent event)throws IOException{
-        Parent root = FXMLLoader.load(getClass().getResource("ScheduleMeetings.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("ViewMeetings.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene=new Scene(root);
         stage.setScene(scene);

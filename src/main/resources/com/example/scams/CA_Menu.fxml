@@ -13,7 +13,7 @@
 <?import javafx.scene.text.Font?>
 
 <BorderPane fx:id="borderpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="510.0" prefWidth="500.0" style="-fx-border-color: #785b57;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.scams.Controller">
-   <top>
+   <center>
         <AnchorPane maxWidth="616.0" minHeight="500.0" minWidth="500.0" prefHeight="529.0" prefWidth="500.0" style="-fx-background-color: #F4ACB7;" BorderPane.alignment="CENTER">
             <children>
                 <AnchorPane layoutX="113.0" layoutY="104.0" prefHeight="0.0" prefWidth="101.0" />
@@ -22,7 +22,61 @@
                   <Font name="Chiller" />
                </font>
             </Label>
-            <Label layoutX="-1.0" layoutY="-1.0" prefHeight="106.0" prefWidth="504.0" style="-fx-background-color: black;" text="            Menu" textAlignment="CENTER">
+            <VBox layoutX="-4.0" layoutY="101.0" prefHeight="408.0" prefWidth="212.0">
+               <children>
+                  <Button fx:id="openaddWindow" minHeight="0.0" minWidth="200.0" mnemonicParsing="false" prefHeight="69.0" prefWidth="212.0" style="-fx-background-color: BLACK; -fx-border-width: 2px 0px 2px; -fx-border-color: #785b57;" text="CREATE CLUB " textFill="#eb92b8">
+                     <font>
+                        <Font name="Century Gothic Bold" size="17.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="openuddwindow" mnemonicParsing="false" prefHeight="63.0" prefWidth="242.0" style="-fx-border-width: 0px 0px 2px; -fx-border-color: #785b57; -fx-background-color: black;" text="EDIT CLUB" textFill="#f29fc2">
+                     <font>
+                        <Font name="Century Gothic Bold" size="17.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="openuddwindow1" mnemonicParsing="false" prefHeight="63.0" prefWidth="242.0" style="-fx-border-width: 0px 0px 2px; -fx-border-color: #785b57; -fx-background-color: black;" text="DELETE CLUB" textFill="#f29fc2">
+                     <font>
+                        <Font name="Century Gothic Bold" size="17.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="openuddwindow11" mnemonicParsing="false" prefHeight="63.0" prefWidth="242.0" style="-fx-border-width: 0px 0px 2px; -fx-border-color: #785b57; -fx-background-color: black;" text="VIEW CLUBS" textFill="#f29fc2">
+                     <font>
+                        <Font name="Century Gothic Bold" size="17.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="addvctWindow" mnemonicParsing="false" prefHeight="63.0" prefWidth="237.0" style="-fx-background-color: BLACK; -fx-border-width: 0px 0px 2px; -fx-border-color: #785b57;" text="SCHEDULE MEETINGS" textFill="#f29fc2">
+                     <font>
+                        <Font name="Century Gothic Bold" size="17.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="opendddWindow1" mnemonicParsing="false" prefHeight="62.0" prefWidth="239.0" style="-fx-background-color: black; -fx-border-width: 0px 0px 2px; -fx-border-color: #785b57;" text="VIEW MEETINGS" textFill="#f29fc2">
+                     <font>
+                        <Font name="Century Gothic Bold" size="17.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="opendddWindow2" mnemonicParsing="false" prefHeight="62.0" prefWidth="239.0" style="-fx-background-color: black; -fx-border-width: 0px 0px 2px; -fx-border-color: #785b57;" text="SCHEDULE EVENTS" textFill="#f29fc2">
+                     <font>
+                        <Font name="Century Gothic Bold" size="17.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="opendddWindow" mnemonicParsing="false" prefHeight="62.0" prefWidth="239.0" style="-fx-background-color: black; -fx-border-width: 0px 0px 2px; -fx-border-color: #785b57;" text="VIEW EVENTS" textFill="#f29fc2">
+                     <font>
+                        <Font name="Century Gothic Bold" size="17.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="opendddWindow21" mnemonicParsing="false" prefHeight="62.0" prefWidth="239.0" style="-fx-background-color: black; -fx-border-width: 0px 0px 2px; -fx-border-color: #785b57;" text="EXIT" textFill="#f29fc2">
+                     <font>
+                        <Font name="Century Gothic Bold" size="17.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+            <ImageView fitHeight="279.0" fitWidth="283.0" layoutX="212.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../menu.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="-6.0" layoutY="-5.0" prefHeight="113.0" prefWidth="506.0" style="-fx-background-color: black;" text="              Menu" textAlignment="CENTER">
                <font>
                   <Font name="System Bold Italic" size="64.0" />
                </font>
@@ -53,57 +107,13 @@
                   </LinearGradient>
                </textFill>
             </Label>
-            <ImageView fitHeight="100.0" fitWidth="86.0" layoutX="38.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="100.0" fitWidth="86.0" layoutX="52.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../logo.jpeg" />
-               </image>
-            </ImageView>
-            <VBox layoutX="-4.0" layoutY="105.0" prefHeight="404.0" prefWidth="212.0">
-               <children>
-                  <Button mnemonicParsing="false" onAction="#gotocreateclub" prefHeight="63.0" prefWidth="212.0" style="-fx-background-color: black;" text="CREATE CLUB" textFill="#f4acb7">
-                     <font>
-                        <Font name="System Bold" size="14.0" />
-                     </font>
-                  </Button>
-                  <Button mnemonicParsing="false" onAction="#gotoeditclub" prefHeight="62.0" prefWidth="212.0" style="-fx-background-color: black;" text="EDIT CLUB" textFill="#f4acb7">
-                     <font>
-                        <Font name="System Bold" size="14.0" />
-                     </font>
-                  </Button>
-                  <Button mnemonicParsing="false" onAction="#gotoDeleteclub" prefHeight="62.0" prefWidth="211.0" style="-fx-background-color: black;" text="DELETE CLUB" textFill="#f4acb7">
-                     <font>
-                        <Font name="System Bold" size="14.0" />
-                     </font>
-                  </Button>
-                  <Button mnemonicParsing="false" prefHeight="63.0" prefWidth="212.0" style="-fx-background-color: black;" text="VIEW CLUBS" textFill="#f4acb7">
-                     <font>
-                        <Font name="System Bold" size="14.0" />
-                     </font>
-                  </Button>
-                  <Button mnemonicParsing="false" onAction="#gotoschedulevent" prefHeight="72.0" prefWidth="212.0" style="-fx-background-color: black;" text="SCHEDULE EVENTS" textFill="#f4acb7">
-                     <font>
-                        <Font name="System Bold" size="14.0" />
-                     </font>
-                  </Button>
-                  <Button mnemonicParsing="false" onAction="#gotoschedulemeeting" prefHeight="66.0" prefWidth="212.0" style="-fx-background-color: black;" text="SCHEDULE MEETINGS" textFill="#f4acb7">
-                     <font>
-                        <Font name="System Bold" size="14.0" />
-                     </font>
-                  </Button>
-                  <Button mnemonicParsing="false" onAction="#exit" prefHeight="74.0" prefWidth="212.0" style="-fx-background-color: black;" text="EXIT" textFill="#f4acb7">
-                     <font>
-                        <Font name="System Bold" size="14.0" />
-                     </font>
-                  </Button>
-               </children>
-            </VBox>
-            <ImageView fitHeight="279.0" fitWidth="283.0" layoutX="212.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../menu.jpg" />
                </image>
             </ImageView>
 
             </children>
         </AnchorPane>
-   </top>
+   </center>
 </BorderPane>

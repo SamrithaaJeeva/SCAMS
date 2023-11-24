@@ -6,10 +6,13 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
+import java.awt.event.MouseEvent;
 import java.io.*;
 
 public class Club_Controller
 {
+    @FXML
+    private TextField ClubID;
     @FXML
     private TextField ClubName;
     @FXML
@@ -20,11 +23,14 @@ public class Club_Controller
     @FXML
     private Button CreateClubProfileBtn;
 
-
     public static void main(String[] args) {
     }
 
     public void setClubs(Clubs clubs) {
+        if(ClubID != null)
+        {
+            ClubID.setText(String.valueOf(clubs.getClubID()));
+        }
         if (ClubName != null) {
             ClubName.setText(clubs.getClubName());
         }
@@ -36,14 +42,14 @@ public class Club_Controller
         }
 
     }
-
     @FXML
     public void CreateClubProfileBtn(ActionEvent actionEvent) {
-        if (ClubName == null || AdvisorName == null || Description == null) {
+        if (ClubID==null||ClubName == null || AdvisorName == null || Description == null) {
             System.err.println("Error: text fields are null.");
             return;
         }
 
+        int ID= Integer.parseInt(ClubID.getText());
         String name = ClubName.getText();
         String advisor_name = AdvisorName.getText();
         String description = Description.getText();
@@ -76,18 +82,15 @@ public class Club_Controller
         alert.showAndWait();
 
         // Clear the text fields after saving
+        ClubID.clear();
         AdvisorName.clear();
         Description.clear();
         ClubName.clear();
 
     }
-    public Button getCreateClubProfileBtn() {
-        return CreateClubProfileBtn;
-    }
 
-    public void setCreateClubProfileBtn(Button createClubProfileBtn) {
-        CreateClubProfileBtn = createClubProfileBtn;
-    }
+   @FXML
+   private TextField EditID;
     @FXML
     private TextField EditName;
     @FXML
@@ -99,6 +102,7 @@ public class Club_Controller
 
     @FXML
     private void editClubProfileBtn(ActionEvent event) {
+        int ID= Integer.parseInt(EditID.getText());
         String name =EditName.getText();
         String advisorName = EditAdvisorName.getText();
         String description = EditDescription.getText();
@@ -112,6 +116,7 @@ public class Club_Controller
         showInfoAlert("Club profile details successfully added");
 
         // Clear the text fields after saving
+        EditID.clear();
         EditName.clear();
         EditAdvisorName.clear();
         EditDescription.clear();
@@ -119,6 +124,7 @@ public class Club_Controller
 
     @FXML
     private void handleEditClubProfile(ActionEvent event) {
+        int ID= Integer.parseInt(EditID.getText().trim());
         String name = EditName.getText().trim();
         String advisorName = EditAdvisorName.getText();
         String description = EditDescription.getText();
@@ -166,6 +172,7 @@ public class Club_Controller
             showInfoAlert("Club profile details successfully updated");
 
             // Clear the text fields after updating
+            EditID.clear();
             EditName.clear();
             EditAdvisorName.clear();
             EditDescription.clear();
@@ -189,6 +196,17 @@ public class Club_Controller
         alert.setHeaderText(null);
         alert.setContentText(message);
         alert.showAndWait();
+    }
+    //Deleteclub
+    @FXML
+    private TextField DeleteID;
+
+    public void DeleteClub(ActionEvent event) {
+        String deleteclub = DeleteID.getText().trim();
+        if (deleteclub.isEmpty() || !deleteclub.matches("\\d+")) {
+            System.out.println("Not a valid Club ID");
+            return;
+        }
     }
 
 }

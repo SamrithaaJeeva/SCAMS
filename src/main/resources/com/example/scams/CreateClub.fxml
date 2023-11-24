@@ -1,81 +1,106 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="borderpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="531.0" prefWidth="500.0" style="-fx-border-color: #785b57;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.scams.Club_Controller">
+<BorderPane fx:id="borderpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="531.0" prefWidth="500.0" style="-fx-border-color: #785b57;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.scams.Club_Controller">
     <center>
-        <AnchorPane maxWidth="616.0" minWidth="500.0" prefHeight="529.0" prefWidth="500.0" style="-fx-background-color: #F4ACB7;" BorderPane.alignment="CENTER">
+        <AnchorPane maxWidth="616.0" minHeight="500.0" minWidth="500.0" prefHeight="529.0" prefWidth="500.0" style="-fx-background-color: #F4ACB7;" BorderPane.alignment="CENTER">
             <children>
-                <VBox layoutY="-7.0" prefHeight="549.0" prefWidth="155.0" style="-fx-background-color: BLACK; -fx-border-color: #785b57;">
+                <VBox layoutY="89.0" prefHeight="444.0" prefWidth="202.0" style="-fx-background-color: BLACK; -fx-border-color: #785b57;">
                     <children>
                         <VBox minWidth="200.0" style="-fx-border-color: #785b57;">
                             <VBox.margin>
                                 <Insets top="10.0" />
                             </VBox.margin>
                         </VBox>
-                        
-                        <Button fx:id="openuddwindow" mnemonicParsing="false" prefHeight="49.0" prefWidth="210.0" style="-fx-border-width: 0px 0px 2px; -fx-border-color: #785b57; -fx-background-color: black;" text="MANAGE CLUB" textFill="#f29fc2">
-                            <font>
-                                <Font name="Century Gothic Bold" size="17.0" />
-                            </font>
-                        </Button>
-                        <Button fx:id="CreateClubProfileBtn" minHeight="0.0" minWidth="200.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="237.0" style="-fx-background-color: BLACK; -fx-border-width: 2px 0px 2px; -fx-border-color: #785b57;" text="CREATE CLUB PROFILE" textFill="#eb92b8">
-                            <font>
-                                <Font name="Century Gothic Bold" size="17.0" />
-                            </font>
-                        </Button>
-                        <Button fx:id="opendddWindow" mnemonicParsing="false" prefHeight="62.0" prefWidth="239.0" style="-fx-background-color: black; -fx-border-width: 0px 0px 2px; -fx-border-color: #785b57;" text="SCHEDULE EVENTS" textFill="#f29fc2">
-                            <font>
-                                <Font name="Century Gothic Bold" size="17.0" />
-                            </font>
-                        </Button>
-                        <Button fx:id="loadRacedetails" mnemonicParsing="false" prefHeight="51.0" prefWidth="239.0" style="-fx-background-color: BLACK; -fx-border-width: 0px 0px 2px; -fx-border-color: #785b57;" text="TRACK ATTENDANCE " textFill="#f29fc2">
-                            <font>
-                                <Font name="Century Gothic Bold" size="17.0" />
-                            </font>
-                        </Button>
-                        <Button fx:id="addvctWindow" mnemonicParsing="false" prefHeight="63.0" prefWidth="237.0" style="-fx-background-color: BLACK; -fx-border-width: 0px 0px 2px; -fx-border-color: #785b57;" text="SCHEDULE MEETINGS" textFill="#f29fc2">
-                            <font>
-                                <Font name="Century Gothic Bold" size="17.0" />
-                            </font>
-                        </Button>
+                  <Button fx:id="openuddwindow" mnemonicParsing="false" prefHeight="63.0" prefWidth="242.0" style="-fx-border-width: 0px 0px 2px; -fx-border-color: #785b57; -fx-background-color: black;" text="EDIT CLUB" textFill="#f29fc2">
+                     <font>
+                        <Font name="Century Gothic Bold" size="17.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="openuddwindow1" mnemonicParsing="false" prefHeight="63.0" prefWidth="242.0" style="-fx-border-width: 0px 0px 2px; -fx-border-color: #785b57; -fx-background-color: black;" text="DELETE CLUB" textFill="#f29fc2">
+                     <font>
+                        <Font name="Century Gothic Bold" size="17.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="openuddwindow11" mnemonicParsing="false" prefHeight="63.0" prefWidth="242.0" style="-fx-border-width: 0px 0px 2px; -fx-border-color: #785b57; -fx-background-color: black;" text="VIEW CLUBS" textFill="#f29fc2">
+                     <font>
+                        <Font name="Century Gothic Bold" size="17.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="addvctWindow" mnemonicParsing="false" prefHeight="63.0" prefWidth="237.0" style="-fx-background-color: BLACK; -fx-border-width: 0px 0px 2px; -fx-border-color: #785b57;" text="SCHEDULE MEETINGS" textFill="#f29fc2">
+                     <font>
+                        <Font name="Century Gothic Bold" size="17.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="opendddWindow" mnemonicParsing="false" prefHeight="62.0" prefWidth="239.0" style="-fx-background-color: black; -fx-border-width: 0px 0px 2px; -fx-border-color: #785b57;" text="VIEW MEETINGS" textFill="#f29fc2">
+                     <font>
+                        <Font name="Century Gothic Bold" size="17.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="loadRacedetails" mnemonicParsing="false" prefHeight="59.0" prefWidth="203.0" style="-fx-background-color: BLACK; -fx-border-width: 0px 0px 2px; -fx-border-color: #785b57;" text="SCHEDULE EVENTS" textFill="#f29fc2">
+                     <font>
+                        <Font name="Century Gothic Bold" size="17.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="loadRacedetails1" mnemonicParsing="false" prefHeight="59.0" prefWidth="203.0" style="-fx-background-color: BLACK; -fx-border-width: 0px 0px 2px; -fx-border-color: #785b57;" text="VIEW EVENTS" textFill="#f29fc2">
+                     <font>
+                        <Font name="Century Gothic Bold" size="17.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="loadRacedetails2" mnemonicParsing="false" prefHeight="59.0" prefWidth="203.0" style="-fx-background-color: BLACK; -fx-border-width: 0px 0px 2px; -fx-border-color: #785b57;" text="EXIT" textFill="#f29fc2">
+                     <font>
+                        <Font name="Century Gothic Bold" size="17.0" />
+                     </font>
+                  </Button>
                     </children>
                 </VBox>
                 <AnchorPane layoutX="113.0" layoutY="104.0" prefHeight="0.0" prefWidth="101.0" />
-                <AnchorPane layoutX="199.0" layoutY="-8.0" prefHeight="98.0" prefWidth="302.0" style="-fx-background-color: black;">
+                <AnchorPane layoutX="-1.0" layoutY="-8.0" prefHeight="113.0" prefWidth="502.0" style="-fx-background-color: black;">
                     <children>
-                        <Label layoutX="25.0" layoutY="41.0" prefHeight="28.0" prefWidth="243.0" text="CREATE CLUB PROFILE" textAlignment="CENTER" textFill="#eb92b8">
+                        <Label layoutX="226.0" layoutY="42.0" prefHeight="28.0" prefWidth="260.0" text="CREATE CLUB PROFILE" textAlignment="CENTER" textFill="#eb92b8">
                             <font>
                                 <Font name="Century Gothic Bold" size="22.0" />
                             </font>
                         </Label>
+                  <ImageView fitHeight="93.0" fitWidth="100.0" layoutX="52.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../logo.jpeg" />
+                     </image>
+                  </ImageView>
                     </children>
                 </AnchorPane>
                 <Label />
-                <Label layoutX="221.0" layoutY="121.0" prefHeight="38.0" prefWidth="150.0" text="Enter Club Name">
+                <Label layoutX="215.0" layoutY="218.0" prefHeight="38.0" prefWidth="182.0" text="Enter Club Name">
                     <font>
                         <Font name="System Bold" size="18.0" />
                     </font>
                 </Label>
-                <Label layoutX="215.0" layoutY="233.0" prefHeight="38.0" prefWidth="230.0" text="Enter Club Advisor's Name">
+                <Label layoutX="218.0" layoutY="316.0" prefHeight="38.0" prefWidth="251.0" text="Enter Club Advisor's Name">
                     <font>
                         <Font name="System Bold" size="18.0" />
                     </font>
                 </Label>
-                <Label layoutX="215.0" layoutY="349.0" prefHeight="38.0" prefWidth="230.0" text="Enter Club Description">
+                <Label layoutX="212.0" layoutY="388.0" prefHeight="38.0" prefWidth="255.0" text="Enter Club Description">
                     <font>
                         <Font name="System Bold" size="18.0" />
                     </font>
                 </Label>
-                <TextField fx:id="ClubName" layoutX="215.0" layoutY="159.0" prefHeight="26.0" prefWidth="230.0" style="-fx-border-color: black; -fx-background-color: transparent; -fx-border-width: 0 0 1 0;">
+                <TextField fx:id="ClubName" layoutX="218.0" layoutY="245.0" prefHeight="41.0" prefWidth="243.0" style="-fx-border-color: black; -fx-background-color: transparent; -fx-border-width: 0 0 1 0;">
                     <font>
                         <Font size="18.0" />
                     </font>
                 </TextField>
-                <TextField fx:id="AdvisorName" layoutX="215.0" layoutY="287.0" prefHeight="26.0" prefWidth="230.0" style="-fx-border-width: 0 0 1 0; -fx-background-color: transparent; -fx-border-color: black;">
+                <TextField fx:id="AdvisorName" layoutX="217.0" layoutY="343.0" prefHeight="15.0" prefWidth="230.0" style="-fx-border-width: 0 0 1 0; -fx-background-color: transparent; -fx-border-color: black;">
                <font>
                   <Font size="18.0" />
                </font></TextField>
@@ -83,11 +108,21 @@
                <font>
                   <Font size="18.0" />
                </font></TextField>
-                <Button layoutX="361.0" layoutY="476.0" mnemonicParsing="false" onAction="#CreateClubProfileBtn" prefHeight="40.0" prefWidth="110.0" style="-fx-background-color: black;" text="Submit" textFill="#eb92b8">
+                <Button fx:id="CreateClubProfileBtn" layoutX="361.0" layoutY="476.0" mnemonicParsing="false" onAction="#CreateClubProfileBtn" prefHeight="40.0" prefWidth="110.0" style="-fx-background-color: black;" text="Submit" textFill="#eb92b8">
                     <font>
                         <Font name="System Bold" size="18.0" />
                     </font>
                 </Button>
+            <Label layoutX="218.0" layoutY="124.0" prefHeight="38.0" prefWidth="161.0" text="Enter Club ID">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="ClubID" layoutX="218.0" layoutY="156.0" prefHeight="27.0" prefWidth="267.0" style="-fx-border-color: black; -fx-background-color: transparent; -fx-border-width: 0 0 1 0;">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
             </children>
         </AnchorPane>
     </center>

@@ -3,32 +3,37 @@ package com.example.scams;
 public class Clubs {
 
     //Create club.txt profile variables
+    private int ClubID;
     private String ClubName;
     private String AdvisorName;
     private String Description;
 
     //Edit club.txt profile variables
+    private int EditID;
     private String EditName;
     private String EditAdvisorName;
     private String EditDescription;
 
     //Delete club.txt profile Variables
 
-    private String DeleteClubName;
+    private String DeleteClubID;
 
     // Getter and setters of deleteClub
-    public String getDeleteClubName() {
-        return DeleteClubName;
+    public String getDeleteClubID() {
+        return DeleteClubID;
     }
 
-    public void setDeleteClubName(String deleteClubName) {
-        DeleteClubName = deleteClubName;
+    public void setDeleteClubID(String deleteClubID) {
+        DeleteClubID = deleteClubID;
     }
-
-
-
 
     //Edit club.txt profile getters and setters
+   public int getEditID(){return EditID;}
+
+    public void setEditID(int editID) {
+        EditID = editID;
+    }
+
     public String getEditName() {
         return EditName;
     }
@@ -57,6 +62,15 @@ public class Clubs {
 
 
     //Create club.txt profile getters and setters
+
+    public int getClubID() {
+        return ClubID;
+    }
+
+    public void setClubID(int clubID) {
+        ClubID = clubID;
+    }
+
     public String getClubName() {
         return ClubName;
     }
@@ -81,7 +95,8 @@ public class Clubs {
         Description = Description;
     }
 
-    public Clubs(String ClubName, String AdvisorName, String Description) {
+    public Clubs(int clubID,String ClubName, String AdvisorName, String Description) {
+        this.ClubID=clubID;
         this.ClubName = ClubName;
         this.AdvisorName = AdvisorName;
         this.Description = Description;

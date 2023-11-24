@@ -62,9 +62,9 @@ public class Scheduling_Controller {
 
         // Check if the "OK" button was clicked
         if (result.isPresent() && result.get() == ButtonType.OK) {
-            // Load the ScheduleEvents.fxml file and close the current scene
+            // Load the ViewEvents.fxml file and close the current scene
             try {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("ScheduleEvents.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("ViewEvents.fxml"));
                 Parent root = loader.load();
                 Scene scene = new Scene(root);
                 Stage stage = (Stage) EventName.getScene().getWindow(); // MeetingName is part of the current scene
@@ -77,7 +77,7 @@ public class Scheduling_Controller {
 
     public void openScheduleMeetings(ActionEvent actionEvent) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("ScheduleMeetings.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("ViewMeetings.fxml"));
             Parent root = loader.load();
             // Create a new scene
             Scene scene = new Scene(root);
@@ -92,7 +92,7 @@ public class Scheduling_Controller {
 
     public void openScheduleEvents(ActionEvent actionEvent) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("ScheduleEvents.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("ViewEvents.fxml"));
             Parent root = loader.load();
             // Create a new scene
             Scene scene = new Scene(root);
@@ -150,9 +150,9 @@ public class Scheduling_Controller {
 
         // Check if the "OK" button was clicked
         if (result.isPresent() && result.get() == ButtonType.OK) {
-            // Load the ScheduleMeetings.fxml file and close the current scene
+            // Load the ViewMeetings.fxml file and close the current scene
             try {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("ScheduleMeetings.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("ViewMeetings.fxml"));
                 Parent root = loader.load();
                 Scene scene = new Scene(root);
                 Stage stage = (Stage) MeetingName.getScene().getWindow(); // MeetingName is part of the current scene
