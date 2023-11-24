@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane fx:id="borderpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="531.0" prefWidth="500.0" style="-fx-border-color: #785b57;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.project.HelloController">
+<BorderPane fx:id="borderpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="531.0" prefWidth="500.0" style="-fx-border-color: #785b57;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.scams.Controller">
     <center>
         <AnchorPane maxWidth="616.0" minWidth="500.0" prefHeight="551.0" prefWidth="561.0" style="-fx-background-color: #F4ACB7;" BorderPane.alignment="CENTER">
             <children>
@@ -19,7 +19,7 @@
                         </VBox>
                         <ImageView fitHeight="255.0" fitWidth="257.0" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@../../../../java/com/example/scams/logo.jpeg" />
+                                <Image url="@../../../logo.jpeg" />
                             </image>
                         </ImageView>
                         <Button fx:id="openaddWindow" minHeight="0.0" minWidth="200.0" mnemonicParsing="false" onMouseClicked="#openaddWindow" prefHeight="62.0" prefWidth="237.0" style="-fx-background-color: BLACK; -fx-border-width: 2px 0px 2px; -fx-border-color: #785b57;" text="CREATE CLUB PROFILE" textFill="#eb92b8">

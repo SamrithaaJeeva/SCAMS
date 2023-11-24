@@ -10,56 +10,56 @@
 <?import javafx.scene.paint.LinearGradient?>
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
 <BorderPane fx:id="borderpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="467.0" prefWidth="500.0" style="-fx-border-color: #785b57;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.scams.Controller">
-    <center>
-        <AnchorPane maxHeight="498.0" maxWidth="510.0" minWidth="350.0" prefHeight="529.0" prefWidth="510.0" style="-fx-background-color: #F4ACB7;" BorderPane.alignment="CENTER">
+   <left>
+        <AnchorPane maxHeight="498.0" maxWidth="516.0" minWidth="350.0" prefHeight="469.0" prefWidth="516.0" style="-fx-background-color: #F4ACB7;" BorderPane.alignment="CENTER">
             <children>
                 <AnchorPane layoutX="113.0" layoutY="104.0" prefHeight="0.0" prefWidth="101.0" />
-            <BorderPane layoutX="91.0" layoutY="-1.0" prefHeight="95.0" prefWidth="411.0" style="-fx-background-color: black;">
-               <center>
-                  <Label text="WELCOME" BorderPane.alignment="CENTER">
-                     <textFill>
-                        <LinearGradient endX="0.318918920207668" endY="1.0" startX="0.1540540617865485">
-                           <stops>
-                              <Stop>
-                                 <color>
-                                    <Color />
-                                 </color>
-                              </Stop>
-                              <Stop offset="1.0">
-                                 <color>
-                                    <Color red="0.6917293071746826" green="0.6554349064826965" blue="0.6295102834701538" />
-                                 </color>
-                              </Stop>
-                           </stops>
-                        </LinearGradient>
-                     </textFill>
-                     <font>
-                        <Font size="64.0" />
-                     </font>
-                  </Label>
-               </center>
-            </BorderPane>
-            <ImageView fitHeight="116.0" fitWidth="92.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="260.0" fitWidth="220.0" layoutX="255.0" layoutY="252.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../java/com/example/scams/logo.jpeg" />
+                  <Image url="@../../../Student.jpg" />
                </image>
             </ImageView>
-            <Button layoutX="47.0" layoutY="322.0" mnemonicParsing="false" prefHeight="77.0" prefWidth="134.0" text="Club Advisor" />
-            <Button layoutX="316.0" layoutY="320.0" mnemonicParsing="false" prefHeight="77.0" prefWidth="134.0" text="Student" />
-            <Text layoutX="3.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to the Student Activity Club Managment System of IIT. This system consists of all the clubs that are available at IIT,and helps both students and advisors to keep in track of the the club's activities" textAlignment="JUSTIFY" wrappingWidth="497.7565085887909">
+            <BorderPane layoutX="-24.0" prefHeight="480.0" prefWidth="250.0" style="-fx-background-color: black;">
+               <center>
+                  <ImageView fitHeight="213.0" fitWidth="315.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                     <image>
+                        <Image url="@../../../logo.jpeg" />
+                     </image>
+                  </ImageView>
+               </center>
+            </BorderPane>
+            <ImageView fitHeight="260.0" fitWidth="220.0" layoutX="255.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Advisor.jpg" />
+               </image>
+            </ImageView>
+            <Button layoutX="293.0" layoutY="64.0" mnemonicParsing="false" onAction="#gotoadvisor" prefHeight="192.0" prefWidth="145.0" style="-fx-background-color: transparent;" />
+            <Button layoutX="310.0" layoutY="288.0" mnemonicParsing="false" onAction="#gotostudent" prefHeight="162.0" prefWidth="124.0" style="-fx-background-color: transparent;" />
+            <Label layoutX="224.0" layoutY="1.0" prefHeight="70.0" prefWidth="277.0" text="  WELCOME" textAlignment="JUSTIFY">
                <font>
-                  <Font size="17.0" />
-               </font></Text>
-            <Text layoutX="62.0" layoutY="285.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Click the designation that applies to you" textAlignment="CENTER" wrappingWidth="372.1502990722656">
-               <font>
-                  <Font name="System Italic" size="18.0" />
+                  <Font size="48.0" />
                </font>
-            </Text>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
                 
             </children>
         </AnchorPane>
-    </center>
+   </left>
 </BorderPane>

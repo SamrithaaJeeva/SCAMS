@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane fx:id="borderpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="531.0" prefWidth="500.0" style="-fx-border-color: #785b57;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.scams.Controller">
+<BorderPane fx:id="borderpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="531.0" prefWidth="500.0" style="-fx-border-color: #785b57;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.scams.Club_Controller">
     <center>
         <AnchorPane maxWidth="616.0" minWidth="500.0" prefHeight="529.0" prefWidth="500.0" style="-fx-background-color: #F4ACB7;" BorderPane.alignment="CENTER">
             <children>
@@ -83,7 +83,7 @@
                     <font>
                         <Font size="18.0" />
                     </font></TextField>
-                <Button layoutX="361.0" layoutY="476.0" mnemonicParsing="false" onAction="#EditClubProfileBtn" prefHeight="40.0" prefWidth="110.0" style="-fx-background-color: black;" text="Submit" textFill="#eb92b8">
+                <Button layoutX="361.0" layoutY="476.0" mnemonicParsing="false" onAction="#editClubProfileBtn" prefHeight="40.0" prefWidth="110.0" style="-fx-background-color: black;" text="Submit" textFill="#eb92b8">
                     <font>
                         <Font name="System Bold" size="18.0" />
                     </font>

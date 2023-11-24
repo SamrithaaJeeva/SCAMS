@@ -55,22 +55,22 @@
             </Label>
             <ImageView fitHeight="100.0" fitWidth="86.0" layoutX="38.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../java/com/example/scams/logo.jpeg" />
+                  <Image url="@../../../logo.jpeg" />
                </image>
             </ImageView>
             <VBox layoutX="-4.0" layoutY="105.0" prefHeight="359.0" prefWidth="212.0">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="212.0" style="-fx-background-color: black;" text="CREATE CLUB" textFill="#f4acb7">
+                  <Button mnemonicParsing="false" onAction="#gotocreateclub" prefHeight="50.0" prefWidth="212.0" style="-fx-background-color: black;" text="CREATE CLUB" textFill="#f4acb7">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </Button>
-                  <Button mnemonicParsing="false" prefHeight="52.0" prefWidth="212.0" style="-fx-background-color: black;" text="EDIT CLUB" textFill="#f4acb7">
+                  <Button mnemonicParsing="false" onAction="#gotoeditclub" prefHeight="52.0" prefWidth="212.0" style="-fx-background-color: black;" text="EDIT CLUB" textFill="#f4acb7">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </Button>
-                  <Button mnemonicParsing="false" prefHeight="52.0" prefWidth="211.0" style="-fx-background-color: black;" text="DELETE CLUB" textFill="#f4acb7">
+                  <Button mnemonicParsing="false" onAction="#gotoDeleteclub" prefHeight="52.0" prefWidth="211.0" style="-fx-background-color: black;" text="DELETE CLUB" textFill="#f4acb7">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
@@ -80,17 +80,17 @@
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </Button>
-                  <Button mnemonicParsing="false" prefHeight="52.0" prefWidth="216.0" style="-fx-background-color: black;" text="SCHEDULE EVENTS" textFill="#f4acb7">
+                  <Button mnemonicParsing="false" onAction="#gotoschedulevent" prefHeight="52.0" prefWidth="216.0" style="-fx-background-color: black;" text="SCHEDULE EVENTS" textFill="#f4acb7">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </Button>
-                  <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="212.0" style="-fx-background-color: black;" text="MARK ATTENDANCE" textFill="#f4acb7">
+                  <Button mnemonicParsing="false" onAction="#gotoschedulemeeting" prefHeight="52.0" prefWidth="216.0" style="-fx-background-color: black;" text="SCHEDULE MEETINGS" textFill="#f4acb7">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </Button>
-                  <Button mnemonicParsing="false" prefHeight="52.0" prefWidth="212.0" style="-fx-background-color: black;" text="EXIT" textFill="#f4acb7">
+                  <Button mnemonicParsing="false" onAction="#exit" prefHeight="52.0" prefWidth="212.0" style="-fx-background-color: black;" text="EXIT" textFill="#f4acb7">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
@@ -99,7 +99,7 @@
             </VBox>
             <ImageView fitHeight="279.0" fitWidth="283.0" layoutX="212.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../java/com/example/scams/menu.jpg" />
+                  <Image url="@../../../menu.jpg" />
                </image>
             </ImageView>
 
