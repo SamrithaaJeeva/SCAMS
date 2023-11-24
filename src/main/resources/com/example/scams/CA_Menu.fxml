@@ -12,9 +12,9 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="borderpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="467.0" prefWidth="500.0" style="-fx-border-color: #785b57;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.scams.Controller">
+<BorderPane fx:id="borderpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="510.0" prefWidth="500.0" style="-fx-border-color: #785b57;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.scams.Controller">
    <top>
-        <AnchorPane maxHeight="498.0" maxWidth="510.0" minWidth="350.0" prefHeight="529.0" prefWidth="510.0" style="-fx-background-color: #F4ACB7;" BorderPane.alignment="CENTER">
+        <AnchorPane maxWidth="616.0" minHeight="500.0" minWidth="500.0" prefHeight="529.0" prefWidth="500.0" style="-fx-background-color: #F4ACB7;" BorderPane.alignment="CENTER">
             <children>
                 <AnchorPane layoutX="113.0" layoutY="104.0" prefHeight="0.0" prefWidth="101.0" />
             <Label layoutX="301.0" layoutY="15.0">
@@ -58,39 +58,39 @@
                   <Image url="@../../../logo.jpeg" />
                </image>
             </ImageView>
-            <VBox layoutX="-4.0" layoutY="105.0" prefHeight="359.0" prefWidth="212.0">
+            <VBox layoutX="-4.0" layoutY="105.0" prefHeight="404.0" prefWidth="212.0">
                <children>
-                  <Button mnemonicParsing="false" onAction="#gotocreateclub" prefHeight="50.0" prefWidth="212.0" style="-fx-background-color: black;" text="CREATE CLUB" textFill="#f4acb7">
+                  <Button mnemonicParsing="false" onAction="#gotocreateclub" prefHeight="63.0" prefWidth="212.0" style="-fx-background-color: black;" text="CREATE CLUB" textFill="#f4acb7">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </Button>
-                  <Button mnemonicParsing="false" onAction="#gotoeditclub" prefHeight="52.0" prefWidth="212.0" style="-fx-background-color: black;" text="EDIT CLUB" textFill="#f4acb7">
+                  <Button mnemonicParsing="false" onAction="#gotoeditclub" prefHeight="62.0" prefWidth="212.0" style="-fx-background-color: black;" text="EDIT CLUB" textFill="#f4acb7">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </Button>
-                  <Button mnemonicParsing="false" onAction="#gotoDeleteclub" prefHeight="52.0" prefWidth="211.0" style="-fx-background-color: black;" text="DELETE CLUB" textFill="#f4acb7">
+                  <Button mnemonicParsing="false" onAction="#gotoDeleteclub" prefHeight="62.0" prefWidth="211.0" style="-fx-background-color: black;" text="DELETE CLUB" textFill="#f4acb7">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </Button>
-                  <Button mnemonicParsing="false" prefHeight="52.0" prefWidth="219.0" style="-fx-background-color: black;" text="VIEW CLUBS" textFill="#f4acb7">
+                  <Button mnemonicParsing="false" prefHeight="63.0" prefWidth="212.0" style="-fx-background-color: black;" text="VIEW CLUBS" textFill="#f4acb7">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </Button>
-                  <Button mnemonicParsing="false" onAction="#gotoschedulevent" prefHeight="52.0" prefWidth="216.0" style="-fx-background-color: black;" text="SCHEDULE EVENTS" textFill="#f4acb7">
+                  <Button mnemonicParsing="false" onAction="#gotoschedulevent" prefHeight="72.0" prefWidth="212.0" style="-fx-background-color: black;" text="SCHEDULE EVENTS" textFill="#f4acb7">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </Button>
-                  <Button mnemonicParsing="false" onAction="#gotoschedulemeeting" prefHeight="52.0" prefWidth="216.0" style="-fx-background-color: black;" text="SCHEDULE MEETINGS" textFill="#f4acb7">
+                  <Button mnemonicParsing="false" onAction="#gotoschedulemeeting" prefHeight="66.0" prefWidth="212.0" style="-fx-background-color: black;" text="SCHEDULE MEETINGS" textFill="#f4acb7">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </Button>
-                  <Button mnemonicParsing="false" onAction="#exit" prefHeight="52.0" prefWidth="212.0" style="-fx-background-color: black;" text="EXIT" textFill="#f4acb7">
+                  <Button mnemonicParsing="false" onAction="#exit" prefHeight="74.0" prefWidth="212.0" style="-fx-background-color: black;" text="EXIT" textFill="#f4acb7">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
