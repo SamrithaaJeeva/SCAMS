@@ -7,85 +7,68 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Objects;
 
-public class Controller {
+public class Attendance_Controller {
     private Stage stage;
     private Scene scene;
-    private Parent root;
-
-    //Navigation home page
-    public void gotoadvisor(ActionEvent event)throws IOException{
-        Parent root = FXMLLoader.load(getClass().getResource("CA_Menu.fxml"));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene=new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
-
-    public void gotostudent(ActionEvent event)throws IOException{
-        Parent root = FXMLLoader.load(getClass().getResource("RegisterWithSCAMS.fxml"));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene=new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
 
     //Navigation bar
-    public void gotocreateclub(ActionEvent event)throws IOException{
-        Parent root = FXMLLoader.load(getClass().getResource("CreateClub.fxml"));
+    public void gotocreateclub(ActionEvent event)throws IOException {
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("CreateClub.fxml")));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene=new Scene(root);
         stage.setScene(scene);
         stage.show();
     }
     public void gotoeditclub(ActionEvent event)throws IOException{
-        Parent root = FXMLLoader.load(getClass().getResource("EditClub.fxml"));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("EditClub.fxml")));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene=new Scene(root);
         stage.setScene(scene);
         stage.show();
     }
     public void gotoDeleteclub(ActionEvent event)throws IOException{
-        Parent root = FXMLLoader.load(getClass().getResource("Delete.fxml"));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Delete.fxml")));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene=new Scene(root);
         stage.setScene(scene);
         stage.show();
     }
     public void gotoviewclub(ActionEvent event)throws IOException{
-        Parent root = FXMLLoader.load(getClass().getResource("View.fxml"));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("View.fxml")));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene=new Scene(root);
         stage.setScene(scene);
         stage.show();
     }
     public void gotoschedulemeeting(ActionEvent event)throws IOException{
-        Parent root = FXMLLoader.load(getClass().getResource("AddMeetings.fxml"));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("AddMeetings.fxml")));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene=new Scene(root);
         stage.setScene(scene);
         stage.show();
     }
     public void gotoviewmeeting(ActionEvent event)throws IOException{
-        Parent root = FXMLLoader.load(getClass().getResource("ViewMeetings.fxml"));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("ViewMeetings.fxml")));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene=new Scene(root);
         stage.setScene(scene);
         stage.show();
     }
     public void gotoschedulevent(ActionEvent event)throws IOException{
-        Parent root = FXMLLoader.load(getClass().getResource("AddEvents.fxml"));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("AddEvents.fxml")));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene=new Scene(root);
         stage.setScene(scene);
         stage.show();
     }
     public void gotoviewevents(ActionEvent event)throws IOException{
-        Parent root = FXMLLoader.load(getClass().getResource("ViewEvents.fxml"));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("ViewEvents.fxml")));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene=new Scene(root);
         stage.setScene(scene);
@@ -96,5 +79,15 @@ public class Controller {
         Stage stage=(Stage)exit.getScene().getWindow();
         stage.close();
     }
+
+    //Content
+    @FXML
+    private TextField meetingID;
+    @FXML
+    private TextField eventID;
+    @FXML
+    private Button search;
+    //write code to get text from these and validate
+    //Write code for the table
 
 }

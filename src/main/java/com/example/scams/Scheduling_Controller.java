@@ -3,12 +3,10 @@ package com.example.scams;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.ButtonType;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import java.io.BufferedWriter;
@@ -19,7 +17,7 @@ import java.util.Optional;
 public class Scheduling_Controller {
     @FXML
     private TextField EventName;
-    @FXML
+    @FXML      
     private DatePicker EventDate;
 
     @FXML
@@ -162,5 +160,85 @@ public class Scheduling_Controller {
             }
         }
     }
+    //Navigation bar
+    private Stage stage;
+    private Scene scene;
+    private Parent root;
+    public void gotocreateclub(ActionEvent event)throws IOException{
+        Parent root = FXMLLoader.load(getClass().getResource("CreateClub.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene=new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    public void gotoeditclub(ActionEvent event)throws IOException{
+        Parent root = FXMLLoader.load(getClass().getResource("EditClub.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene=new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    public void gotoDeleteclub(ActionEvent event)throws IOException{
+        Parent root = FXMLLoader.load(getClass().getResource("Delete.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene=new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    public void gotoviewclub(ActionEvent event)throws IOException{
+        Parent root = FXMLLoader.load(getClass().getResource("View.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene=new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    public void gotoschedulemeeting(ActionEvent event)throws IOException{
+        Parent root = FXMLLoader.load(getClass().getResource("AddMeetings.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene=new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    public void gotoviewmeeting(ActionEvent event)throws IOException{
+        Parent root = FXMLLoader.load(getClass().getResource("ViewMeetings.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene=new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    public void gotoschedulevent(ActionEvent event)throws IOException{
+        Parent root = FXMLLoader.load(getClass().getResource("AddEvents.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene=new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    public void gotoviewevents(ActionEvent event)throws IOException{
+        Parent root = FXMLLoader.load(getClass().getResource("ViewEvents.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene=new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    public void gotomeetingattendance(ActionEvent event)throws IOException{
+        Parent root = FXMLLoader.load(getClass().getResource("MeetingAttendance.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene=new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    public void gotoeventattendance(ActionEvent event)throws IOException{
+        Parent root = FXMLLoader.load(getClass().getResource("EventAttendance.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene=new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    public Button exit;
+    public void exit(){
+        Stage stage=(Stage)exit.getScene().getWindow();
+        stage.close();
+    }
+
 
 }

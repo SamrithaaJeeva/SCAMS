@@ -19,47 +19,47 @@
                <children>
       
             
-                              <Button fx:id="openaddWindow" minHeight="0.0" minWidth="200.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="237.0" style="-fx-background-color: BLACK; -fx-border-width: 2px 0px 2px; -fx-border-color: #785b57;" text="CREATE CLUB " textFill="#eb92b8">
+                              <Button minHeight="0.0" minWidth="200.0" mnemonicParsing="false" onAction="#gotocreateclub" prefHeight="62.0" prefWidth="237.0" style="-fx-background-color: BLACK; -fx-border-width: 2px 0px 2px; -fx-border-color: #785b57;" text="CREATE CLUB " textFill="#eb92b8">
                             <font>
                                 <Font name="Century Gothic Bold" size="17.0" />
                             </font>
                         </Button>
-                        <Button fx:id="openuddwindow" mnemonicParsing="false" prefHeight="63.0" prefWidth="242.0" style="-fx-border-width: 0px 0px 2px; -fx-border-color: #785b57; -fx-background-color: black;" text="EDIT CLUB" textFill="#f29fc2">
+                        <Button mnemonicParsing="false" onAction="#gotoeditclub" prefHeight="63.0" prefWidth="242.0" style="-fx-border-width: 0px 0px 2px; -fx-border-color: #785b57; -fx-background-color: black;" text="EDIT CLUB" textFill="#f29fc2">
                             <font>
                                 <Font name="Century Gothic Bold" size="17.0" />
                             </font>
                         </Button>
-                  <Button fx:id="openuddwindow1" mnemonicParsing="false" prefHeight="63.0" prefWidth="242.0" style="-fx-border-width: 0px 0px 2px; -fx-border-color: #785b57; -fx-background-color: black;" text="DELETE CLUB" textFill="#f29fc2">
+                  <Button mnemonicParsing="false" onAction="#gotoDeleteclub" prefHeight="63.0" prefWidth="242.0" style="-fx-border-width: 0px 0px 2px; -fx-border-color: #785b57; -fx-background-color: black;" text="DELETE CLUB" textFill="#f29fc2">
                      <font>
                         <Font name="Century Gothic Bold" size="17.0" />
                      </font>
                   </Button>
-                  <Button fx:id="openuddwindow11" mnemonicParsing="false" prefHeight="63.0" prefWidth="242.0" style="-fx-border-width: 0px 0px 2px; -fx-border-color: #785b57; -fx-background-color: black;" text="VIEW CLUBS" textFill="#f29fc2">
+                  <Button mnemonicParsing="false" onAction="#gotoviewclub" prefHeight="63.0" prefWidth="242.0" style="-fx-border-width: 0px 0px 2px; -fx-border-color: #785b57; -fx-background-color: black;" text="VIEW CLUBS" textFill="#f29fc2">
                      <font>
                         <Font name="Century Gothic Bold" size="17.0" />
                      </font>
                   </Button>
-                        <Button fx:id="addvctWindow" mnemonicParsing="false" prefHeight="63.0" prefWidth="237.0" style="-fx-background-color: BLACK; -fx-border-width: 0px 0px 2px; -fx-border-color: #785b57;" text="SCHEDULE MEETINGS" textFill="#f29fc2">
+                        <Button mnemonicParsing="false" onAction="#gotoschedulemeeting" prefHeight="63.0" prefWidth="237.0" style="-fx-background-color: BLACK; -fx-border-width: 0px 0px 2px; -fx-border-color: #785b57;" text="SCHEDULE MEETINGS" textFill="#f29fc2">
                             <font>
                                 <Font name="Century Gothic Bold" size="17.0" />
                             </font>
                         </Button>
-                        <Button fx:id="opendddWindow" mnemonicParsing="false" prefHeight="62.0" prefWidth="239.0" style="-fx-background-color: black; -fx-border-width: 0px 0px 2px; -fx-border-color: #785b57;" text="VIEW MEETINGS" textFill="#f29fc2">
+                        <Button mnemonicParsing="false" onAction="#gotoviewmeeting" prefHeight="62.0" prefWidth="239.0" style="-fx-background-color: black; -fx-border-width: 0px 0px 2px; -fx-border-color: #785b57;" text="VIEW MEETINGS" textFill="#f29fc2">
                             <font>
                                 <Font name="Century Gothic Bold" size="17.0" />
                             </font>
                         </Button>
-                        <Button fx:id="loadRacedetails" mnemonicParsing="false" prefHeight="59.0" prefWidth="203.0" style="-fx-background-color: BLACK; -fx-border-width: 0px 0px 2px; -fx-border-color: #785b57;" text="TRACK ATTENDANCE " textFill="#f29fc2">
+                        <Button mnemonicParsing="false" onAction="#gotoeventattendance" prefHeight="59.0" prefWidth="203.0" style="-fx-background-color: BLACK; -fx-border-width: 0px 0px 2px; -fx-border-color: #785b57;" text="TRACK ATTENDANCE " textFill="#f29fc2">
                             <font>
                                 <Font name="Century Gothic Bold" size="17.0" />
                             </font>
                         </Button>
-                  <Button fx:id="opendddWindow1" mnemonicParsing="false" prefHeight="62.0" prefWidth="239.0" style="-fx-background-color: black; -fx-border-width: 0px 0px 2px; -fx-border-color: #785b57;" text="VIEW EVENTS" textFill="#f29fc2">
+                  <Button mnemonicParsing="false" onAction="#gotoviewevents" prefHeight="62.0" prefWidth="239.0" style="-fx-background-color: black; -fx-border-width: 0px 0px 2px; -fx-border-color: #785b57;" text="VIEW EVENTS" textFill="#f29fc2">
                      <font>
                         <Font name="Century Gothic Bold" size="17.0" />
                      </font>
                   </Button>
-                  <Button fx:id="opendddWindow11" mnemonicParsing="false" prefHeight="62.0" prefWidth="239.0" style="-fx-background-color: black; -fx-border-width: 0px 0px 2px; -fx-border-color: #785b57;" text="EXIT" textFill="#f29fc2">
+                  <Button fx:id="exit" mnemonicParsing="false" onAction="#exit" prefHeight="62.0" prefWidth="239.0" style="-fx-background-color: black; -fx-border-width: 0px 0px 2px; -fx-border-color: #785b57;" text="EXIT" textFill="#f29fc2">
                      <font>
                         <Font name="Century Gothic Bold" size="17.0" />
                      </font>

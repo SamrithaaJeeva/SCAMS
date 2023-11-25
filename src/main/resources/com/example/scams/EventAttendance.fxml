@@ -12,53 +12,53 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="borderpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="531.0" prefWidth="680.0" style="-fx-border-color: #785b57;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.scams.Controller">
+<BorderPane fx:id="borderpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="531.0" prefWidth="680.0" style="-fx-border-color: #785b57;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.scams.Attendance_Controller">
     <top>
         <AnchorPane maxWidth="691.0" minHeight="500.0" minWidth="670.0" prefHeight="529.0" prefWidth="691.0" style="-fx-background-color: #F4ACB7;" BorderPane.alignment="CENTER">
             <children>
                 <VBox layoutX="-10.0" layoutY="98.0" prefHeight="433.0" prefWidth="244.0" style="-fx-background-color: BLACK; -fx-border-color: #785b57;">
                     <children>
-                        <Button fx:id="openaddWindow1" minHeight="0.0" minWidth="200.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="237.0" style="-fx-background-color: BLACK; -fx-border-width: 2px 0px 2px; -fx-border-color: #785b57;" text="CREATE CLUB " textFill="#eb92b8">
+                        <Button minHeight="0.0" minWidth="200.0" mnemonicParsing="false" onAction="#gotocreateclub" prefHeight="62.0" prefWidth="237.0" style="-fx-background-color: BLACK; -fx-border-width: 2px 0px 2px; -fx-border-color: #785b57;" text="CREATE CLUB " textFill="#eb92b8">
                             <font>
                                 <Font name="Century Gothic Bold" size="17.0" />
                             </font>
                         </Button>
-                        <Button fx:id="openuddwindow" mnemonicParsing="false" prefHeight="63.0" prefWidth="242.0" style="-fx-border-width: 0px 0px 2px; -fx-border-color: #785b57; -fx-background-color: black;" text="EDIT CLUB" textFill="#f29fc2">
+                        <Button mnemonicParsing="false" onAction="#gotoeditclub" prefHeight="63.0" prefWidth="242.0" style="-fx-border-width: 0px 0px 2px; -fx-border-color: #785b57; -fx-background-color: black;" text="EDIT CLUB" textFill="#f29fc2">
                             <font>
                                 <Font name="Century Gothic Bold" size="17.0" />
                             </font>
                         </Button>
-                        <Button fx:id="openuddwindow1" mnemonicParsing="false" prefHeight="63.0" prefWidth="242.0" style="-fx-border-width: 0px 0px 2px; -fx-border-color: #785b57; -fx-background-color: black;" text="DELETE CLUB" textFill="#f29fc2">
+                        <Button mnemonicParsing="false" onAction="#gotoDeleteclub" prefHeight="63.0" prefWidth="242.0" style="-fx-border-width: 0px 0px 2px; -fx-border-color: #785b57; -fx-background-color: black;" text="DELETE CLUB" textFill="#f29fc2">
                             <font>
                                 <Font name="Century Gothic Bold" size="17.0" />
                             </font>
                         </Button>
-                        <Button fx:id="openuddwindow11" mnemonicParsing="false" prefHeight="63.0" prefWidth="242.0" style="-fx-border-width: 0px 0px 2px; -fx-border-color: #785b57; -fx-background-color: black;" text="VIEW CLUBS" textFill="#f29fc2">
+                        <Button mnemonicParsing="false" onAction="#gotoviewclub" prefHeight="63.0" prefWidth="242.0" style="-fx-border-width: 0px 0px 2px; -fx-border-color: #785b57; -fx-background-color: black;" text="VIEW CLUBS" textFill="#f29fc2">
                             <font>
                                 <Font name="Century Gothic Bold" size="17.0" />
                             </font>
                         </Button>
-                        <Button fx:id="opendddWindow" mnemonicParsing="false" prefHeight="62.0" prefWidth="239.0" style="-fx-background-color: black; -fx-border-width: 0px 0px 2px; -fx-border-color: #785b57;" text="SCHEDULE MEETINGS" textFill="#f29fc2">
+                        <Button mnemonicParsing="false" onAction="#gotoschedulemeeting" prefHeight="62.0" prefWidth="239.0" style="-fx-background-color: black; -fx-border-width: 0px 0px 2px; -fx-border-color: #785b57;" text="SCHEDULE MEETINGS" textFill="#f29fc2">
                             <font>
                                 <Font name="Century Gothic Bold" size="17.0" />
                             </font>
                         </Button>
-                        <Button fx:id="addvctWindow1" mnemonicParsing="false" prefHeight="63.0" prefWidth="237.0" style="-fx-background-color: BLACK; -fx-border-width: 0px 0px 2px; -fx-border-color: #785b57;" text="VIEW MEETINGS" textFill="#f29fc2">
+                        <Button mnemonicParsing="false" onAction="#gotoviewmeeting" prefHeight="63.0" prefWidth="237.0" style="-fx-background-color: BLACK; -fx-border-width: 0px 0px 2px; -fx-border-color: #785b57;" text="VIEW MEETINGS" textFill="#f29fc2">
                             <font>
                                 <Font name="Century Gothic Bold" size="17.0" />
                             </font>
                         </Button>
-                  <Button fx:id="addvctWindow12" mnemonicParsing="false" prefHeight="63.0" prefWidth="237.0" style="-fx-background-color: BLACK; -fx-border-width: 0px 0px 2px; -fx-border-color: #785b57;" text="SCHEDULE EVENTS" textFill="#f29fc2">
+                  <Button mnemonicParsing="false" onAction="#gotoschedulevent" prefHeight="63.0" prefWidth="237.0" style="-fx-background-color: BLACK; -fx-border-width: 0px 0px 2px; -fx-border-color: #785b57;" text="SCHEDULE EVENTS" textFill="#f29fc2">
                      <font>
                         <Font name="Century Gothic Bold" size="17.0" />
                      </font>
                   </Button>
-                  <Button fx:id="addvctWindow13" mnemonicParsing="false" prefHeight="63.0" prefWidth="237.0" style="-fx-background-color: BLACK; -fx-border-width: 0px 0px 2px; -fx-border-color: #785b57;" text="VIEW EVENTS" textFill="#f29fc2">
+                  <Button mnemonicParsing="false" onAction="#gotoviewevents" prefHeight="63.0" prefWidth="237.0" style="-fx-background-color: BLACK; -fx-border-width: 0px 0px 2px; -fx-border-color: #785b57;" text="VIEW EVENTS" textFill="#f29fc2">
                      <font>
                         <Font name="Century Gothic Bold" size="17.0" />
                      </font>
                   </Button>
-                        <Button fx:id="addvctWindow11" mnemonicParsing="false" prefHeight="63.0" prefWidth="237.0" style="-fx-background-color: BLACK; -fx-border-width: 0px 0px 2px; -fx-border-color: #785b57;" text="EXIT" textFill="#f29fc2">
+                        <Button fx:id="exit" mnemonicParsing="false" onAction="#exit" prefHeight="63.0" prefWidth="237.0" style="-fx-background-color: BLACK; -fx-border-width: 0px 0px 2px; -fx-border-color: #785b57;" text="EXIT" textFill="#f29fc2">
                             <font>
                                 <Font name="Century Gothic Bold" size="17.0" />
                             </font>
@@ -91,8 +91,8 @@
                   <Font name="System Italic" size="18.0" />
                </font>
             </Label>
-            <Button layoutX="583.0" layoutY="124.0" mnemonicParsing="false" text="Search" />
-            <TextField layoutX="377.0" layoutY="125.0" prefHeight="25.0" prefWidth="198.0" />
+            <Button fx:id="search" layoutX="583.0" layoutY="124.0" mnemonicParsing="false" text="Search" />
+            <TextField fx:id="eventID" layoutX="377.0" layoutY="125.0" prefHeight="25.0" prefWidth="198.0" />
             </children>
         </AnchorPane>
     </top>

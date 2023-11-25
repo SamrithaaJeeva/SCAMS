@@ -2,15 +2,23 @@ package com.example.scams;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 import java.awt.event.MouseEvent;
 import java.io.*;
 
 public class Club_Controller
 {
+    private Stage stage;
+    private Scene scene;
+    private Parent root;
     @FXML
     private TextField ClubID;
     @FXML
@@ -49,13 +57,14 @@ public class Club_Controller
             return;
         }
 
-        int ID= Integer.parseInt(ClubID.getText());
+        String ID= ClubID.getText();
         String name = ClubName.getText();
         String advisor_name = AdvisorName.getText();
         String description = Description.getText();
 
 
-        if (name.isBlank() || advisor_name.isBlank() || description.isBlank()) {
+        if (ID.isBlank()||name.isBlank() || advisor_name.isBlank() || description.isBlank()) {
+
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Error");
             alert.setHeaderText(null);
@@ -102,12 +111,12 @@ public class Club_Controller
 
     @FXML
     private void editClubProfileBtn(ActionEvent event) {
-        int ID= Integer.parseInt(EditID.getText());
+        String ID= EditID.getText();
         String name =EditName.getText();
         String advisorName = EditAdvisorName.getText();
         String description = EditDescription.getText();
 
-        if (name.isBlank() || advisorName.isBlank() || description.isBlank()) {
+        if (ID.isBlank()||name.isBlank() || advisorName.isBlank() || description.isBlank()) {
             showErrorAlert("Incomplete details. Please fill in all fields.");
             return;
         }
@@ -124,7 +133,7 @@ public class Club_Controller
 
     @FXML
     private void handleEditClubProfile(ActionEvent event) {
-        int ID= Integer.parseInt(EditID.getText().trim());
+        String ID= EditID.getText().trim();
         String name = EditName.getText().trim();
         String advisorName = EditAdvisorName.getText();
         String description = EditDescription.getText();
@@ -207,6 +216,69 @@ public class Club_Controller
             System.out.println("Not a valid Club ID");
             return;
         }
+    }
+
+    //Navigation bar
+    public void gotocreateclub(ActionEvent event)throws IOException{
+        Parent root = FXMLLoader.load(getClass().getResource("CreateClub.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene=new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    public void gotoeditclub(ActionEvent event)throws IOException{
+        Parent root = FXMLLoader.load(getClass().getResource("EditClub.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene=new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    public void gotoDeleteclub(ActionEvent event)throws IOException{
+        Parent root = FXMLLoader.load(getClass().getResource("Delete.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene=new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    public void gotoviewclub(ActionEvent event)throws IOException{
+        Parent root = FXMLLoader.load(getClass().getResource("View.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene=new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    public void gotoschedulemeeting(ActionEvent event)throws IOException{
+        Parent root = FXMLLoader.load(getClass().getResource("AddMeetings.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene=new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    public void gotoviewmeeting(ActionEvent event)throws IOException{
+        Parent root = FXMLLoader.load(getClass().getResource("ViewMeetings.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene=new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    public void gotoschedulevent(ActionEvent event)throws IOException{
+        Parent root = FXMLLoader.load(getClass().getResource("AddEvents.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene=new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    public void gotoviewevents(ActionEvent event)throws IOException{
+        Parent root = FXMLLoader.load(getClass().getResource("ViewEvents.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene=new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    public Button exit;
+    public void exit(){
+        Stage stage=(Stage)exit.getScene().getWindow();
+        stage.close();
     }
 
 }
