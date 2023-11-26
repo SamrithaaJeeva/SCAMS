@@ -49,7 +49,7 @@
                                 <Font name="Century Gothic Bold" size="17.0" />
                             </font>
                         </Button>
-                        <Button mnemonicParsing="false" onAction="#gotoeventattendance" prefHeight="59.0" prefWidth="203.0" style="-fx-background-color: BLACK; -fx-border-width: 0px 0px 2px; -fx-border-color: #785b57;" text="TRACK ATTENDANCE " textFill="#f29fc2">
+                        <Button mnemonicParsing="false" onAction="#gotoattendance" prefHeight="59.0" prefWidth="203.0" style="-fx-background-color: BLACK; -fx-border-width: 0px 0px 2px; -fx-border-color: #785b57;" text="MARK ATTENDANCE" textFill="#f29fc2">
                             <font>
                                 <Font name="Century Gothic Bold" size="17.0" />
                             </font>

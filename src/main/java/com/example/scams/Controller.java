@@ -91,6 +91,13 @@ public class Controller {
         stage.setScene(scene);
         stage.show();
     }
+    public void gotoattendance(ActionEvent event)throws IOException{
+        Parent root = FXMLLoader.load(getClass().getResource("Attendance.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene=new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
     public Button exit;
     public void exit(){
         Stage stage=(Stage)exit.getScene().getWindow();

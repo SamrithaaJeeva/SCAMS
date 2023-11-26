@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -48,16 +49,16 @@
                                 <Font name="Century Gothic Bold" size="17.0" />
                             </font>
                         </Button>
-                        <Button mnemonicParsing="false" onAction="#gotoschedulevent" prefHeight="63.0" prefWidth="237.0" style="-fx-background-color: BLACK; -fx-border-width: 0px 0px 2px; -fx-border-color: #785b57;" text="SCHEDULE EVENTS" textFill="#f29fc2">
-                            <font>
-                                <Font name="Century Gothic Bold" size="17.0" />
-                            </font>
-                        </Button>
-                        <Button mnemonicParsing="false" onAction="#gotoviewevents" prefHeight="63.0" prefWidth="237.0" style="-fx-background-color: BLACK; -fx-border-width: 0px 0px 2px; -fx-border-color: #785b57;" text="VIEW EVENTS" textFill="#f29fc2">
-                            <font>
-                                <Font name="Century Gothic Bold" size="17.0" />
-                            </font>
-                        </Button>
+                  <Button mnemonicParsing="false" onAction="#gotoschedulevent" prefHeight="63.0" prefWidth="237.0" style="-fx-background-color: BLACK; -fx-border-width: 0px 0px 2px; -fx-border-color: #785b57;" text="SCHEDULE EVENTS" textFill="#f29fc2">
+                     <font>
+                        <Font name="Century Gothic Bold" size="17.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#gotoviewevents" prefHeight="63.0" prefWidth="237.0" style="-fx-background-color: BLACK; -fx-border-width: 0px 0px 2px; -fx-border-color: #785b57;" text="VIEW EVENTS" textFill="#f29fc2">
+                     <font>
+                        <Font name="Century Gothic Bold" size="17.0" />
+                     </font>
+                  </Button>
                         <Button fx:id="exit" mnemonicParsing="false" onAction="#exit" prefHeight="63.0" prefWidth="237.0" style="-fx-background-color: BLACK; -fx-border-width: 0px 0px 2px; -fx-border-color: #785b57;" text="EXIT" textFill="#f29fc2">
                             <font>
                                 <Font name="Century Gothic Bold" size="17.0" />
@@ -67,7 +68,7 @@
                 </VBox>
                 <AnchorPane layoutX="-11.0" layoutY="-6.0" prefHeight="111.0" prefWidth="693.0" style="-fx-background-color: black;">
                     <children>
-                        <Label layoutX="327.0" layoutY="21.0" prefHeight="74.0" prefWidth="331.0" text="MEETING ATTENDANCE" textAlignment="CENTER" textFill="#eb92b8">
+                        <Label layoutX="393.0" layoutY="19.0" prefHeight="74.0" prefWidth="184.0" text=" ATTENDANCE" textAlignment="CENTER" textFill="#eb92b8">
                             <font>
                                 <Font name="System Bold" size="24.0" />
                             </font>
@@ -79,20 +80,43 @@
                         </ImageView>
                     </children>
                 </AnchorPane>
-                <TableView layoutX="243.0" layoutY="158.0" prefHeight="348.0" prefWidth="423.0">
-                    <columns>
-                        <TableColumn prefWidth="152.32095336914062" text="StudentID" />
-                        <TableColumn prefWidth="147.10760498046875" text="Student Name" />
-                        <TableColumn prefWidth="122.1700439453125" text="Attendance" />
-                    </columns>
-                </TableView>
-                <Label layoutX="256.0" layoutY="124.0" prefHeight="27.0" prefWidth="154.0" text="Enter Meeting ID">
-                    <font>
-                        <Font name="System Italic" size="18.0" />
-                    </font>
-                </Label>
-                <Button fx:id="search" layoutX="583.0" layoutY="124.0" mnemonicParsing="false" text="Search" />
-                <TextField fx:id="meetingID" layoutX="400.0" layoutY="125.0" prefHeight="25.0" prefWidth="175.0" />
+            <Label layoutX="248.0" layoutY="147.0" prefHeight="20.0" prefWidth="126.0" text="Activity Name">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label layoutX="250.0" layoutY="173.0" prefHeight="20.0" prefWidth="117.0" text="Enter Student ID">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label layoutX="250.0" layoutY="214.0" prefHeight="20.0" prefWidth="136.0" text="Enter Student Name">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label layoutX="257.0" layoutY="253.0" prefHeight="17.0" prefWidth="112.0" text="Attendance">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <TextField fx:id="studid" layoutX="388.0" layoutY="171.0" prefHeight="25.0" prefWidth="273.0" />
+            <TextField fx:id="studname" layoutX="386.0" layoutY="211.0" prefHeight="25.0" prefWidth="256.0" />
+            <TableView fx:id="table1" layoutX="245.0" layoutY="290.0" prefHeight="230.0" prefWidth="424.0">
+              <columns>
+                <TableColumn fx:id="eventnamecolumn" prefWidth="96.6680908203125" text="Activity Name" />
+                <TableColumn fx:id="StudentIDcolumn" prefWidth="74.2811279296875" text="StudentID" />
+                  <TableColumn fx:id="Studentnamecolumn" prefWidth="93.23348999023438" text="Student name" />
+                  <TableColumn fx:id="attendanceStringTableColumn" prefWidth="82.28570556640625" text="Attendance" />
+                  <TableColumn fx:id="typecolumn" prefWidth="97.71435546875" text="Type" />
+              </columns>
+            </TableView>
+            <Button layoutX="574.0" layoutY="259.0" mnemonicParsing="false" onAction="#button" text="ADD" />
+            <ChoiceBox fx:id="Attendance" layoutX="385.0" layoutY="251.0" prefWidth="150.0" />
+            <Button layoutX="624.0" layoutY="260.0" mnemonicParsing="false" onAction="#newbutton" text="NEW" />
+            <ChoiceBox fx:id="activityname" layoutX="389.0" layoutY="143.0" prefHeight="15.0" prefWidth="213.0" />
+            <ChoiceBox fx:id="Type" layoutX="395.0" layoutY="107.0" prefHeight="25.0" prefWidth="191.0" />
+            <Label layoutX="255.0" layoutY="109.0" prefHeight="20.0" prefWidth="126.0" text="Activity Type">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
             </children>
         </AnchorPane>
     </top>
