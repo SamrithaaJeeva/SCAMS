@@ -15,7 +15,7 @@
 
 <BorderPane fx:id="borderpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="531.0" prefWidth="680.0" style="-fx-border-color: #785b57;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.scams.Attendance_Controller">
     <top>
-        <AnchorPane maxWidth="691.0" minHeight="500.0" minWidth="670.0" prefHeight="529.0" prefWidth="691.0" style="-fx-background-color: #F4ACB7;" BorderPane.alignment="CENTER">
+        <AnchorPane maxWidth="691.0" minHeight="500.0" minWidth="670.0" prefHeight="529.0" prefWidth="687.0" style="-fx-background-color: #F4ACB7;" BorderPane.alignment="CENTER">
             <children>
                 <VBox layoutX="-10.0" layoutY="98.0" prefHeight="433.0" prefWidth="244.0" style="-fx-background-color: BLACK; -fx-border-color: #785b57;">
                     <children>
@@ -100,11 +100,11 @@
             <TextField fx:id="studname" layoutX="386.0" layoutY="211.0" prefHeight="25.0" prefWidth="256.0" />
             <TableView fx:id="table1" layoutX="245.0" layoutY="290.0" prefHeight="230.0" prefWidth="424.0">
               <columns>
-                <TableColumn fx:id="eventnamecolumn" prefWidth="96.6680908203125" text="Activity Name" />
-                <TableColumn fx:id="StudentIDcolumn" prefWidth="74.2811279296875" text="StudentID" />
-                  <TableColumn fx:id="Studentnamecolumn" prefWidth="93.23348999023438" text="Student name" />
-                  <TableColumn fx:id="attendanceStringTableColumn" prefWidth="82.28570556640625" text="Attendance" />
-                  <TableColumn fx:id="typecolumn" prefWidth="97.71435546875" text="Type" />
+                <TableColumn fx:id="eventnamecolumn" prefWidth="77.14285278320312" text="Type" />
+                <TableColumn fx:id="StudentIDcolumn" prefWidth="80.28570556640625" text="StudentID" />
+                  <TableColumn fx:id="Studentnamecolumn" prefWidth="84.99996948242188" text="Activity Name" />
+                  <TableColumn fx:id="attendanceStringTableColumn" prefWidth="83.72134399414062" text="StudentName" />
+                  <TableColumn fx:id="typecolumn" prefWidth="95.54364013671875" text="Attendance" />
               </columns>
             </TableView>
             <Button layoutX="574.0" layoutY="259.0" mnemonicParsing="false" onAction="#button" text="ADD" />

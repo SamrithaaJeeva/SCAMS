@@ -254,12 +254,6 @@ public class Attendance_Controller extends Component {
             ResultSet rs = pat.executeQuery();
 
             while (rs.next()) {
-                String studentID = rs.getString("Student_ID");
-                String activityName = rs.getString("Activity_Name");
-                String studentName = rs.getString("Student_Name");
-                String attendanceValue = rs.getString("Attendance");
-                String type = rs.getString("Type");
-                // Assuming you have an Attendance class, replace with your actual class
                 Attendance attendance = new Attendance(
                         rs.getString("Student_ID"),
                         rs.getString("Activity_Name"),
