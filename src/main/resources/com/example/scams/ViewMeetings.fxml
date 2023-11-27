@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="borderpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="531.0" prefWidth="680.0" style="-fx-border-color: #785b57;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.scams.Scheduling_Controller">
+<BorderPane fx:id="borderpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="531.0" prefWidth="680.0" style="-fx-border-color: #785b57;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.scams.Scheduling_Controller">
    <top>
         <AnchorPane maxWidth="691.0" minHeight="500.0" minWidth="670.0" prefHeight="529.0" prefWidth="691.0" style="-fx-background-color: #F4ACB7;" BorderPane.alignment="CENTER">
             <children>
@@ -72,7 +78,7 @@
                         <TableColumn prefWidth="114.96429443359375" text="MeetingID" />
                         <TableColumn prefWidth="110.40499877929688" text="Meeting Name" />
                   <TableColumn prefWidth="121.02362060546875" text="Meeting Date" />
-                  <TableColumn prefWidth="74.59735107421875" text="ClubID" />
+                  <TableColumn prefWidth="74.59735107421875" text="Club Name" />
                     </columns>
                 </TableView>
                 <Button layoutX="412.0" layoutY="490.0" mnemonicParsing="false" onAction="#openScheduleMeetings" text="Add Meeting" />
