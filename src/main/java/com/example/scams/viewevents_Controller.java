@@ -9,26 +9,24 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.Optional;
 
-public class Scheduling_Controller {
-
+public class viewevents_Controller {
     //Navigation bar
     private Stage stage;
     private Scene scene;
     private Parent root;
-    public void gotocreateclub(ActionEvent event)throws IOException{
+    public void gotocreateclub(ActionEvent event)throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("CreateClub.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene=new Scene(root);
@@ -97,16 +95,24 @@ public class Scheduling_Controller {
         Stage stage=(Stage)exit.getScene().getWindow();
         stage.close();
     }
-    //Content
+    @FXML
+    private TableView<Events> eventtable;
 
     @FXML
-    private TextField eventId;;
+    private TableColumn<Events, String> eventIDcolumn;
+
     @FXML
-    private TextField eventName;
+    private TableColumn<Events, String> eventnamecolumn;
+
     @FXML
-    private DatePicker eventDate;
+    private TableColumn<Events, String> eventdatecolumn;
+
     @FXML
-    private ChoiceBox<String> clubID;
+    private TableColumn<Events, String> clubIDcolumn;
+
+
+    @FXML
+    private ObservableList<Events> data = FXCollections.observableArrayList();
 
     private Connection con;  // Assuming con is initialized elsewhere in your code
 
@@ -117,85 +123,41 @@ public class Scheduling_Controller {
     @FXML
     private void initialize() {
         Connect();
-        updateclubid();
-
     }
-
     @FXML
-    private void submit(ActionEvent event) {
+    private void loadDataToTable(ActionEvent event) {
         try {
-            // Ensure that the connection is not null
-            if (con == null) {
-                Connect();
-                if (con == null) {
-                    System.err.println("Failed to establish a database connection.");
-                    return;
-                }
+            // Clear existing data
+            data.clear();
+
+            PreparedStatement pat = con.prepareStatement("SELECT * FROM events");
+            ResultSet rs = pat.executeQuery();
+
+            while (rs.next()) {
+                Events events = new Events(
+                        rs.getString("Event_ID"),
+                        rs.getString("Event_Name"),
+                        rs.getString("Event_Date"),
+                        rs.getString("Club_ID"));
+
+                // Add the new data to the observable list
+                data.add(events);
             }
 
-            String EventId = eventId.getText();
-            if (EventId.isEmpty()||!EventId.matches("\\d+")) {
-                showAlert("Event ID is not valid");
-                return;
-            }
-            String EventName = eventName.getText();
-            if (EventName.isEmpty()) {
-                showAlert("Event Name is not valid");
-                return;
-            }
+            // Set the items (data) to the table on the JavaFX Application Thread
+            Platform.runLater(() -> eventtable.setItems(data));
 
-            String EventDate = String.valueOf(eventDate.getValue());
-            if (EventDate.isEmpty()) {
-                showAlert("Event date is required");
-                return;
-            }
-
-            String ClubID = clubID.getValue();
-            if(ClubID.isEmpty())
-            {
-                showAlert("ClubID is required");
-            }
-
-            PreparedStatement pat = con.prepareStatement( "INSERT INTO events(Event_ID, Event_Name, Event_Date, Club_ID) VALUES(?,?,?,?)");
-            pat.setString(1, EventId);
-            pat.setString(2, EventName);
-            pat.setString(3, EventDate);
-            pat.setString(4, ClubID);
-
-            pat.executeUpdate();
-
-            System.out.println("Record added");
+            // Set the cell value factories for each column
+            eventIDcolumn.setCellValueFactory(new PropertyValueFactory<>("eventId"));
+            eventnamecolumn.setCellValueFactory(new PropertyValueFactory<>("eventName"));
+            eventdatecolumn.setCellValueFactory(new PropertyValueFactory<>("eventDate"));
+            clubIDcolumn.setCellValueFactory(new PropertyValueFactory<>("clubID"));
 
         } catch (SQLException e) {
+            System.out.println("Error here");
             e.printStackTrace();
         }
     }
-    private void showAlert(String title) {
-        Alert alert = new Alert(Alert.AlertType.ERROR);
-        alert.setTitle("Error");
-        alert.setHeaderText(title);
-        alert.showAndWait();
-    }
 
 
-    private void updateclubid() {
-        try {
-            String query = "SELECT Club_ID FROM club";
-            PreparedStatement pat = con.prepareStatement(query);
-            ResultSet resultSet = pat.executeQuery();
-
-            // Clear existing items before adding new ones
-            clubID.getItems().clear();
-
-            while (resultSet.next()) {
-                String eventName = resultSet.getString("Club_ID");
-                clubID.getItems().add(eventName);
-            }
-        } catch (SQLException e) {
-            System.out.println("Not printed event names");
-            throw new RuntimeException(e);
-
-        }
-    }
 }
-
