@@ -5,9 +5,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -15,7 +13,9 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+
 import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 
 
 public class SignController {
@@ -24,7 +24,7 @@ public class SignController {
     private TextField studentID;
 
     @FXML
-    private TextField studentPass;
+    private PasswordField studentPass;
 
     @FXML
     private Button signIn;
@@ -46,16 +46,23 @@ public class SignController {
 
         // Additional validation logic can be added here based on your requirements
 
+
         // Authenticate user against the database
         authenticateUser(id, password);
     }
 
-    private void showAlert(String error, String s) {
+    private void showAlert(String title, String message ) {
+        Alert alert = new Alert(AlertType.ERROR);
+        alert.setTitle(title);
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.showAndWait();
     }
+
 
     private void authenticateUser(String id, String password) {
         // SQL query to check if the user credentials are valid
-        String selectQuery = "SELECT * FROM members WHERE stud_id = ? AND stud_pass = ?";
+        String selectQuery = "SELECT * FROM student WHERE Student_ID = ? AND Password = ?";
 
         try (PreparedStatement preparedStatement = connection.prepareStatement(selectQuery)) {
             // Set values for the prepared statement
@@ -78,6 +85,8 @@ public class SignController {
         }
     }
 
+
+
     @FXML
     private void registerLink(ActionEvent event) {
         // Load the new FXML file
@@ -99,4 +108,5 @@ public class SignController {
         }
     }
 }
+
 
