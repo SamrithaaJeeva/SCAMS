@@ -12,8 +12,8 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="borderpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="531.0" prefWidth="500.0" style="-fx-border-color: #785b57;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.scams.Scheduling_Controller">
-   <top>
+<BorderPane fx:id="borderpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="531.0" prefWidth="500.0" style="-fx-border-color: #785b57;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.scams.Schmeeting_Controller">
+    <center>
         <AnchorPane maxWidth="616.0" minHeight="500.0" minWidth="500.0" prefHeight="529.0" prefWidth="500.0" style="-fx-background-color: #F4ACB7;" BorderPane.alignment="CENTER">
             <children>
                 <VBox layoutX="-8.0" layoutY="108.0" prefHeight="423.0" prefWidth="205.0" style="-fx-background-color: BLACK; -fx-border-color: #785b57;">
@@ -40,12 +40,12 @@
                                 <Font name="Century Gothic Bold" size="17.0" />
                             </font>
                         </Button>
-                        <Button mnemonicParsing="false" onAction="#gotoschedulevent" prefHeight="63.0" prefWidth="237.0" style="-fx-background-color: BLACK; -fx-border-width: 0px 0px 2px; -fx-border-color: #785b57;" text="SCHEDULE EVENTS" textFill="#f29fc2">
+                        <Button mnemonicParsing="false" onAction="#gotoschedulemeeting" prefHeight="63.0" prefWidth="237.0" style="-fx-background-color: BLACK; -fx-border-width: 0px 0px 2px; -fx-border-color: #785b57;" text="SCHEDULE MEETINGS" textFill="#f29fc2">
                             <font>
                                 <Font name="Century Gothic Bold" size="17.0" />
                             </font>
                         </Button>
-                        <Button mnemonicParsing="false" onAction="#gotoviewevents" prefHeight="62.0" prefWidth="239.0" style="-fx-background-color: black; -fx-border-width: 0px 0px 2px; -fx-border-color: #785b57;" text="VIEW EVENTS" textFill="#f29fc2">
+                        <Button mnemonicParsing="false" onAction="#gotoviewmeeting" prefHeight="62.0" prefWidth="239.0" style="-fx-background-color: black; -fx-border-width: 0px 0px 2px; -fx-border-color: #785b57;" text="VIEW MEETINGS" textFill="#f29fc2">
                             <font>
                                 <Font name="Century Gothic Bold" size="17.0" />
                             </font>
@@ -55,7 +55,7 @@
                                 <Font name="Century Gothic Bold" size="17.0" />
                             </font>
                         </Button>
-                        <Button mnemonicParsing="false" onAction="#gotoviewmeeting" prefHeight="62.0" prefWidth="239.0" style="-fx-background-color: black; -fx-border-width: 0px 0px 2px; -fx-border-color: #785b57;" text="VIEW MEETINGS" textFill="#f29fc2">
+                        <Button mnemonicParsing="false" onAction="#gotoviewevents" prefHeight="62.0" prefWidth="239.0" style="-fx-background-color: black; -fx-border-width: 0px 0px 2px; -fx-border-color: #785b57;" text="VIEW EVENTS" textFill="#f29fc2">
                             <font>
                                 <Font name="Century Gothic Bold" size="17.0" />
                             </font>
@@ -78,11 +78,11 @@
                         <Font name="System Italic" size="18.0" />
                     </font>
                 </Label>
-                <TextField fx:id="EventName" layoutX="204.0" layoutY="254.0" prefHeight="41.0" prefWidth="280.0" />
-                <Button layoutX="290.0" layoutY="483.0" mnemonicParsing="false" onAction="#setEventSubmit" prefHeight="41.0" prefWidth="123.0" text="Submit" />
+                <TextField fx:id="meetingName" layoutX="204.0" layoutY="254.0" prefHeight="41.0" prefWidth="280.0" />
+                <Button layoutX="290.0" layoutY="483.0" mnemonicParsing="false" onAction="#submit" prefHeight="41.0" prefWidth="123.0" text="Submit" />
                 <AnchorPane layoutY="-1.0" prefHeight="114.0" prefWidth="501.0" style="-fx-background-color: black;">
                     <children>
-                        <Label layoutX="183.0" layoutY="16.0" prefHeight="81.0" prefWidth="311.0" text="      SCHEDULE MEETING" textAlignment="CENTER" textFill="#eb94b9">
+                        <Label layoutX="202.0" layoutY="13.0" prefHeight="81.0" prefWidth="260.0" text="        SCHEDULE MEETING" textAlignment="CENTER" textFill="#eb94b9">
                             <font>
                                 <Font name="System Bold" size="24.0" />
                             </font>
@@ -94,20 +94,20 @@
                         </ImageView>
                     </children>
                 </AnchorPane>
-                <DatePicker id="ScheduleDate" fx:id="EventDate" layoutX="210.0" layoutY="329.0" prefHeight="44.0" prefWidth="274.0" />
+                <DatePicker id="ScheduleDate" fx:id="meetingDate" layoutX="210.0" layoutY="329.0" prefHeight="44.0" prefWidth="274.0" />
                 <Label layoutX="206.0" layoutY="131.0" prefHeight="30.0" prefWidth="146.0" text="Enter Meeting ID">
                     <font>
                         <Font name="System Italic" size="18.0" />
                     </font>
                 </Label>
-                <TextField fx:id="EventId" layoutX="205.0" layoutY="165.0" prefHeight="41.0" prefWidth="280.0" />
-                <Label layoutX="211.0" layoutY="388.0" prefHeight="30.0" prefWidth="157.0" text="Enter Club Name">
+                <TextField fx:id="meetingId" layoutX="205.0" layoutY="165.0" prefHeight="41.0" prefWidth="280.0" />
+                <Label layoutX="211.0" layoutY="388.0" prefHeight="30.0" prefWidth="157.0" text="Enter Club ID">
                     <font>
                         <Font name="System Italic" size="18.0" />
                     </font>
                 </Label>
-            <ChoiceBox fx:id="Club_name" layoutX="215.0" layoutY="418.0" prefHeight="39.0" prefWidth="259.0" />
+                <ChoiceBox fx:id="clubID" layoutX="204.0" layoutY="418.0" prefHeight="26.0" prefWidth="270.0" />
             </children>
         </AnchorPane>
-   </top>
+    </center>
 </BorderPane>
