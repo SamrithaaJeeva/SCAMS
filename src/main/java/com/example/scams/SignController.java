@@ -25,6 +25,8 @@ public class SignController {
 
     @FXML
     private PasswordField studentPass;
+    @FXML
+    private CheckBox signinShowpass;
 
     @FXML
     private Button signIn;
@@ -49,7 +51,9 @@ public class SignController {
 
         // Authenticate user against the database
         authenticateUser(id, password);
+        viewClub();
     }
+
 
     private void showAlert(String title, String message ) {
         Alert alert = new Alert(AlertType.ERROR);
@@ -85,6 +89,19 @@ public class SignController {
         }
     }
 
+    @FXML
+    private void signInseePassword(ActionEvent event) {
+        if (signinShowpass.isSelected()) {
+            // If selected, show the password
+            studentPass.setPromptText(studentPass.getText());
+            studentPass.clear();
+        } else {
+            // If not selected, hide the password
+            studentPass.setText(studentPass.getPromptText());
+            studentPass.setPromptText("");
+        }
+
+    }
 
 
     @FXML
@@ -107,6 +124,29 @@ public class SignController {
             e.printStackTrace();
         }
     }
+
+    @FXML
+    private void viewClub() {
+        // Load the new FXML file
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("ViewClub.fxml"));
+        Parent root;
+        try {
+            root = loader.load();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+
+            // Close the current FXML window
+            Stage currentStage = (Stage) signIn.getScene().getWindow();
+            currentStage.close();
+
+            // Show the new FXML window
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
 }
 
 

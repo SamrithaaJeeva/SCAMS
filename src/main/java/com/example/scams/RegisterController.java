@@ -3,6 +3,7 @@ package com.example.scams;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
@@ -50,6 +51,9 @@ public class RegisterController {
     private Button register;
 
     private Connection connection = Connector.connection();
+    private Stage stage;
+    private Scene scene;
+    private Parent root;
 
 
     @FXML
@@ -169,9 +173,20 @@ public class RegisterController {
     }
 
     @FXML
-    private void navigateToHome() {
+    private void navigateToHome(ActionEvent event)throws IOException {
         // Load the new FXML file (assuming "home.fxml")
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("Home.fxml"));
+
+            Parent root = FXMLLoader.load(getClass().getResource("Home.fxml"));
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            scene=new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        }
+
+    @FXML
+    private void viewClub(ActionEvent event) {
+        // Load the new FXML file
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("ViewClub.fxml"));
         Parent root;
         try {
             root = loader.load();
@@ -190,4 +205,8 @@ public class RegisterController {
     }
 
 
-}
+    }
+
+
+
+

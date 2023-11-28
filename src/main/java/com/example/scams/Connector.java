@@ -30,4 +30,7 @@ public class Connector {
         connection();
     }
 
+    public Connection getConnection() {
+        return null;
+    }
 }

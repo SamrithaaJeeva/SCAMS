@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="465.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.scams.ViewClub">
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="698.0" style="-fx-background-color: pink;">
+         <children>
+            <TextArea fx:id = "textArea" layoutX="55.0" layoutY="72.0" prefHeight="328.0" prefWidth="589.0" />
+         </children></AnchorPane>
+   </children>
+</AnchorPane>

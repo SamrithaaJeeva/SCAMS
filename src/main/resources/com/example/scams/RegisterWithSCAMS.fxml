@@ -39,7 +39,7 @@
         <TextField fx:id="studentID" layoutX="241.0" layoutY="141.0" prefHeight="22.0" prefWidth="196.0" />
         <AnchorPane layoutX="-7.0" prefHeight="530.0" prefWidth="196.0" style="-fx-background-color: BLACK;">
             <children>
-                <ImageView fitHeight="146.0" fitWidth="150.0" layoutX="34.0" layoutY="119.0" pickOnBounds="true" preserveRatio="true">
+                <ImageView fitHeight="171.0" fitWidth="175.0" layoutX="34.0" layoutY="119.0" pickOnBounds="true" preserveRatio="true">
                     <image>
                         <Image url="@../../../logo.jpeg" />
                     </image>
@@ -53,12 +53,12 @@
                     <font>
                         <Font name="System Bold" size="12.0" />
                     </font></Button>
-                <ImageView id="back_button" fx:id="back_imageview" fitHeight="85.0" fitWidth="90.0" layoutX="-16.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                <ImageView id="back_button" fx:id="back_imageview" fitHeight="58.0" fitWidth="93.0" layoutX="-7.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@../../../back icon.png" />
+                        <Image url="@../../../backicon.jpeg" />
                     </image>
                 </ImageView>
-                <Button fx:id="back_button" layoutY="6.0" mnemonicParsing="false" onAction="#navigateToHome" prefHeight="49.0" prefWidth="122.0" style="-fx-background-color: transparent;" />
+                <Button fx:id="back_button" layoutX="2.0" layoutY="6.0" mnemonicParsing="false" onAction="#navigateToHome" prefHeight="49.0" prefWidth="122.0" style="-fx-background-color: transparent;" />
             </children>
         </AnchorPane>
         <Label layoutX="296.0" layoutY="400.0" prefHeight="22.0" prefWidth="82.0" text="Choose Club">
@@ -66,7 +66,7 @@
                 <Font name="System Italic" size="13.0" />
             </font>
         </Label>
-        <Button fx:id="back1" layoutX="241.0" layoutY="485.0" mnemonicParsing="false" style="-fx-background-color: black;" text="VIEW CLUBS" textFill="#eb92b8" />
+        <Button fx:id="view_club" layoutX="241.0" layoutY="485.0" mnemonicParsing="false" onAction="#viewClub" style="-fx-background-color: black;" text="VIEW CLUBS" textFill="#eb92b8" />
         <Label layoutX="286.0" layoutY="310.0" style="-fx-background-color: #F4ACB7;" text="Confirm Password">
             <font>
                 <Font name="System Italic" size="13.0" />
