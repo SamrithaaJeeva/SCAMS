@@ -166,6 +166,9 @@ public class Schmeeting_Controller {
 
             System.out.println("Record added");
 
+            // Show a success popup
+            showAlert("Meeting added successfully!");
+
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -192,7 +195,7 @@ public class Schmeeting_Controller {
                 clubID.getItems().add(eventName);
             }
         } catch (SQLException e) {
-            System.out.println("Not printed event names");
+            System.out.println("Not printed meeting names");
             throw new RuntimeException(e);
 
         }

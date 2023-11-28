@@ -17,11 +17,11 @@ public class Meeting {
         return MeetingId;
     }
 
-    public String getEventName() {
+    public String getMeetingName() {
         return MeetingName;
     }
 
-    public String getEventDate() {
+    public String getMeetingDate() {
         return MeetingDate;
     }
 
