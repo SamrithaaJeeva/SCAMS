@@ -168,7 +168,7 @@ public class Scheduling_Controller {
 
             // Show a success popup
             showAlert("Event added successfully!");
-            System.out.println("lalalal");
+
 
         } catch (SQLException e) {
             e.printStackTrace();
