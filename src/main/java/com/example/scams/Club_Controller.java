@@ -129,6 +129,8 @@ public class Club_Controller
                 System.out.println("No record updated");
             }
 
+            showAlert("Club Edited Successfully");
+
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -173,6 +175,7 @@ public class Club_Controller
                 } else {
                     System.out.println("No record deleted");
                 }
+                showAlert("Club Deleted successfully");
 
                 // Close resources
                 deleteStatement.close();

@@ -84,6 +84,13 @@ public class CreateClub_Controller {
 
             System.out.println("Record added");
 
+            showAlert("Club created successfully");
+
+            ClubID.clear();
+            ClubName.clear();
+            AdvisorName.clear();
+            Description.clear();
+
         } catch (SQLException e) {
             e.printStackTrace();
         }
