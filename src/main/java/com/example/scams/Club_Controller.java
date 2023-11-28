@@ -8,11 +8,18 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.awt.event.MouseEvent;
 import java.io.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import static com.example.scams.Connector.password;
 
 public class Club_Controller
 {
@@ -28,9 +35,155 @@ public class Club_Controller
     @FXML
     private TextField Description;
 
-    @FXML
-    private Button CreateClubProfileBtn;
 
+    @FXML
+    private ChoiceBox<String> EditID;
+    @FXML
+    private TextField EditName;
+    @FXML
+    private TextField EditAdvisorName;
+    @FXML
+    private TextField EditDescription;
+
+    private Connection con;  // Assuming con is initialized elsewhere in your code
+
+    public void Connect() {
+        con = Connector.connection();
+    }
+    @FXML
+    private void CreateClubProfileBtn (ActionEvent event) {
+        try {
+            // Ensure that the connection is not null
+            if (con == null) {
+                Connect();
+                if (con == null) {
+                    System.err.println("Failed to establish a database connection.");
+                    return;
+                }
+            }
+
+            String clubIDText= ClubID.getText();
+            if (clubIDText.isEmpty()||!clubIDText.matches("\\d+")) {
+                showAlert("Event ID is not valid");
+                return;
+            }
+            String clubNameText = ClubName.getText();
+            if (clubNameText.isEmpty()) {
+                showAlert("Event Name is not valid");
+                return;
+            }
+
+            String Advisorname = AdvisorName.getText();
+            if (Advisorname.isEmpty()) {
+                showAlert("Event date is required");
+                return;
+            }
+
+            String descriptionValue = Description.getText();
+            if(descriptionValue.isEmpty())
+            {
+                showAlert("ClubID is required");
+            }
+
+            PreparedStatement pat = con.prepareStatement( "INSERT INTO `club`(`Club_ID`, `Club_Name`, `ClubAdvisor_Name`, `Club_Description`)  VALUES(?,?,?,?)");
+            pat.setString(1, clubIDText);
+            pat.setString(2, clubNameText);
+            pat.setString(3, Advisorname);
+            pat.setString(4, descriptionValue);
+
+            pat.executeUpdate();
+
+            System.out.println("Record added");
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+    private void showAlert(String title) {
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("Error");
+        alert.setHeaderText(title);
+        alert.showAndWait();
+    }
+    @FXML
+    private void initialize() {
+        Connect();
+        updateclubID();
+    }
+
+        private void updateclubID() {
+        try {
+            String query = "SELECT Club_ID FROM club";
+            PreparedStatement pat = con.prepareStatement(query);
+            ResultSet resultSet = pat.executeQuery();
+
+            // Clear existing items before adding new ones
+            EditID.getItems().clear();
+
+            while (resultSet.next()) {
+                String EditId = resultSet.getString("Club_ID");
+                EditID.getItems().add(EditId);
+            }
+        } catch (SQLException e) {
+            System.out.println("Not printed event names");
+            throw new RuntimeException(e);
+
+        }
+    }
+    @FXML
+    private void editClubProfileBtn(ActionEvent event) {
+        try {
+            // Ensure that the connection is not null
+            if (con == null) {
+                Connect();
+                if (con == null) {
+                    System.err.println("Failed to establish a database connection.");
+                    return;
+                }
+            }
+
+            String EditText= EditID.getValue();
+            if (EditText.isEmpty()) {
+                showAlert("Event ID is not valid");
+                return;
+            }
+            String EditNameText = EditName.getText();
+            if (EditNameText.isEmpty()) {
+                showAlert("Event Name is not valid");
+                return;
+            }
+
+            String EditAdvisorText=EditAdvisorName.getText();
+            if (EditAdvisorText.isEmpty()) {
+                showAlert("Event date is required");
+                return;
+            }
+
+            String EditDescriptionText = EditDescription.getText();
+            if(EditDescriptionText.isEmpty())
+            {
+                showAlert("ClubID is required");
+            }
+            String updateQuery = "UPDATE club SET Club_Name = ?, ClubAdvisor_Name = ?, Club_Description = ? WHERE Club_ID = ?";
+            PreparedStatement pat = con.prepareStatement(updateQuery);
+
+           /* PreparedStatement pat = con.prepareStatement( "UPDATE club SET Club_Name = ?, ClubAdvisor_Name = ?, Club_Description = ? WHERE Club_ID = ?");
+            PreparedStatement updateStatement = con.prepareStatement(pat);*/
+            pat.setString(1,EditText);
+            pat.setString(2, EditNameText);
+            pat.setString(3, EditAdvisorText);
+            pat.setString(4, EditDescriptionText);
+
+            pat.executeUpdate();
+
+            System.out.println("Record added");
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+/*
     public static void main(String[] args) {
     }
 
@@ -96,18 +249,32 @@ public class Club_Controller
         Description.clear();
         ClubName.clear();
 
+
+    private Connection connection = Connector.connection();
+    private void saveToDatabase(String ClubID, String ClubName, String AdvisorName , String Description) {
+        // SQL query to insert data into the table
+        String insertQuery = "INSERT INTO `club`(`Club_ID`, `Club_Name`, `ClubAdvisor_Name`, `Club_Description`) VALUES (?, ?, ?, ?)";
+
+        try (PreparedStatement preparedStatement = connection.prepareStatement(insertQuery)) {
+
+            // Set values for the prepared statement
+            preparedStatement.setString(1, ClubID);
+            preparedStatement.setString(2, ClubName);
+            preparedStatement.setString(3,AdvisorName );
+            preparedStatement.setString(4,Description );
+
+            // Execute the query
+            preparedStatement.executeUpdate();
+
+            System.out.println("Data inserted successfully.");
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        saveToDatabase( ClubID, ClubName, AdvisorName, Description);
     }
 
-   @FXML
-   private TextField EditID;
-    @FXML
-    private TextField EditName;
-    @FXML
-    private TextField EditAdvisorName;
-    @FXML
-    private TextField EditDescription;
-    @FXML
-    private Button editClubProfileBtn;
+
 
     @FXML
     private void editClubProfileBtn(ActionEvent event) {
@@ -217,6 +384,7 @@ public class Club_Controller
             return;
         }
     }
+    */
 
     //Navigation bar
     public void gotocreateclub(ActionEvent event)throws IOException{
@@ -263,6 +431,13 @@ public class Club_Controller
     }
     public void gotoschedulevent(ActionEvent event)throws IOException{
         Parent root = FXMLLoader.load(getClass().getResource("AddEvents.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene=new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    public void gotoattendance(ActionEvent event)throws IOException{
+        Parent root = FXMLLoader.load(getClass().getResource("Attendance.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene=new Scene(root);
         stage.setScene(scene);
