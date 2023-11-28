@@ -25,6 +25,7 @@ import java.io.IOException;
 
 
 public class RegisterController {
+    //controller
 
     @FXML
     private TextField studentID;
