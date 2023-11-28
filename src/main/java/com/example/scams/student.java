@@ -11,8 +11,14 @@ public class student {
         this.studentName = studentName;
         this.studentPass= studentPass;
         this.clubName=clubName;
-
-
+    }
+    student(String studentName)
+    {
+        this.studentName=studentName; //needed for the attendance class
+    }
+    @Override
+    public String toString() {
+        return studentName; //needed for attendance
     }
 
     // Getters and setters

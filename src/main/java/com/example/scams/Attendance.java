@@ -1,28 +1,21 @@
 package com.example.scams;
 
+import java.util.Objects;
+
 public class Attendance {
-
-       private String studentID;
-       private String studentName;
+       private student studentName;
        private String attendance;
-       private String type; // "Meeting" or "Event"
-       private String activityName; // Meeting name or Event name
+       private String type; //
+       private String activityName; //
 
-       public Attendance(String studentID, String studentName, String attendance, String type, String activityName) {
-           this.studentID = studentID;
-           this.studentName = studentName;
+       public Attendance( String studentName, String attendance, String type, String activityName) {
+           this.studentName = new student(studentName);
            this.attendance = attendance;
            this.type = type;
            this.activityName = activityName;
        }
 
-       // Getters and setters
-
-       public String getStudentID() {
-           return studentID;
-       }
-
-       public String getStudentName() {
+       public student getStudentName() {
            return studentName;
        }
 
@@ -38,11 +31,8 @@ public class Attendance {
            return activityName;
        }
 
-       public void setStudentID(String studentID) {
-           this.studentID = studentID;
-       }
 
-       public void setStudentName(String studentName) {
+       public void setStudentName(student studentName) {
            this.studentName = studentName;
        }
 
@@ -57,7 +47,9 @@ public class Attendance {
        public void setActivityName(String activityName) {
            this.activityName = activityName;
        }
-   }
+
+}
+
 
 
 
