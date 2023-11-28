@@ -22,7 +22,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Optional;
 
-public class Scheduling_Controller {
+public class Schmeeting_Controller {
 
     //Navigation bar
     private Stage stage;
@@ -100,11 +100,11 @@ public class Scheduling_Controller {
     //Content
 
     @FXML
-    private TextField eventId;;
+    private TextField meetingId;;
     @FXML
-    private TextField eventName;
+    private TextField meetingName;
     @FXML
-    private DatePicker eventDate;
+    private DatePicker meetingDate;
     @FXML
     private ChoiceBox<String> clubID;
 
@@ -133,20 +133,20 @@ public class Scheduling_Controller {
                 }
             }
 
-            String EventId = eventId.getText();
-            if (EventId.isEmpty()||!EventId.matches("\\d+")) {
-                showAlert("Event ID is not valid");
+            String MeetingId = meetingId.getText();
+            if (MeetingId.isEmpty()||!MeetingId.matches("\\d+")) {
+                showAlert("Meeting ID is not valid");
                 return;
             }
-            String EventName = eventName.getText();
-            if (EventName.isEmpty()) {
-                showAlert("Event Name is not valid");
+            String MeetingName = meetingName.getText();
+            if (MeetingName.isEmpty()) {
+                showAlert("Meeting Name is not valid");
                 return;
             }
 
-            String EventDate = String.valueOf(eventDate.getValue());
-            if (EventDate.isEmpty()) {
-                showAlert("Event date is required");
+            String MeetingDate = String.valueOf(meetingDate.getValue());
+            if (MeetingDate.isEmpty()) {
+                showAlert("Meeting Date is required");
                 return;
             }
 
@@ -156,10 +156,10 @@ public class Scheduling_Controller {
                 showAlert("ClubID is required");
             }
 
-            PreparedStatement pat = con.prepareStatement( "INSERT INTO events(Event_ID, Event_Name, Event_Date, Club_ID) VALUES(?,?,?,?)");
-            pat.setString(1, EventId);
-            pat.setString(2, EventName);
-            pat.setString(3, EventDate);
+            PreparedStatement pat = con.prepareStatement( "INSERT INTO meetings(Meeting_ID, Meeting_Name, Meeting_Date, Club_ID) VALUES(?,?,?,?)");
+            pat.setString(1, MeetingId);
+            pat.setString(2, MeetingName);
+            pat.setString(3, MeetingDate);
             pat.setString(4, ClubID);
 
             pat.executeUpdate();
@@ -167,8 +167,7 @@ public class Scheduling_Controller {
             System.out.println("Record added");
 
             // Show a success popup
-            showAlert("Event added successfully!");
-
+            showAlert("Meeting added successfully!");
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -196,10 +195,9 @@ public class Scheduling_Controller {
                 clubID.getItems().add(eventName);
             }
         } catch (SQLException e) {
-            System.out.println("Not printed event names");
+            System.out.println("Not printed meeting names");
             throw new RuntimeException(e);
 
         }
     }
 }
-

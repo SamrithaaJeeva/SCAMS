@@ -1,34 +1,32 @@
 package com.example.scams;
 
-import java.util.Date;
-
 public class Meeting {
-    private String Meeting_ID;
-    private String Meeting_name;
-    private Date date;
-    private int club_ID; //Change the variable type to club
-    Meeting(String Meeting_ID,String Meeting_name,Date date,int club_Id)
+    private String MeetingId;
+    private String MeetingName;
+    private String MeetingDate;
+    private String  ClubID;
+    Meeting(String MeetingId,String MeetingName,String MeetingDate,String ClubID)
     {
-        this.Meeting_ID=Meeting_ID;
-        this.Meeting_name=Meeting_name;
-        this.date=date;
-        this.club_ID=club_Id;
+        this.MeetingId=MeetingId;
+        this.MeetingName=MeetingName;
+        this.MeetingDate=MeetingDate;
+        this.ClubID=ClubID;
     }
 
-    public String getMeeting_ID() {
-        return Meeting_ID;
+    public String getMeetingId() {
+        return MeetingId;
     }
 
-    public String getMeeting_name() {
-        return Meeting_name;
+    public String getMeetingName() {
+        return MeetingName;
     }
 
-    public Date getDate() {
-        return date;
+    public String getMeetingDate() {
+        return MeetingDate;
     }
 
-    public int getClub_ID() {
-        return club_ID;
+    public String getClubID() {
+        return ClubID;
     }
-
 }
+
