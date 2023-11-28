@@ -98,8 +98,8 @@ public class RegisterController {
 
 
         // Validate passwords
-        if (!password.equals(confirmPassword)) {
-            showAlert("Error", "Passwords do not match. Please re-enter.");
+        if (password.isEmpty() || !password.equals(confirmPassword)) {
+            showAlert("Error", "Password is empty or passwords do not match. Please re-enter.");
             return;
         }
 
