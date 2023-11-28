@@ -146,7 +146,7 @@ public class Schmeeting_Controller {
 
             String MeetingDate = String.valueOf(meetingDate.getValue());
             if (MeetingDate.isEmpty()) {
-                showAlert("Meeting date is required");
+                showAlert("Meeting Date is required");
                 return;
             }
 
