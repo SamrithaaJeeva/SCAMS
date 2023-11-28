@@ -1,8 +1,5 @@
 package com.example.scams;
 
-import javafx.application.Platform;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -10,17 +7,14 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.Optional;
+import java.time.LocalDate;
 
 public class Schmeeting_Controller {
 
@@ -144,16 +138,20 @@ public class Schmeeting_Controller {
                 return;
             }
 
-            String MeetingDate = String.valueOf(meetingDate.getValue());
+            LocalDate selectedDate = meetingDate.getValue();
+            String MeetingDate = (selectedDate != null) ? selectedDate.toString() : "";
             if (MeetingDate.isEmpty()) {
                 showAlert("Meeting Date is required");
                 return;
             }
 
+
+
+
             String ClubID = clubID.getValue();
-            if(ClubID.isEmpty())
-            {
+            if (ClubID == null || ClubID.isEmpty()) {
                 showAlert("ClubID is required");
+                return;
             }
 
             PreparedStatement pat = con.prepareStatement( "INSERT INTO meetings(Meeting_ID, Meeting_Name, Meeting_Date, Club_ID) VALUES(?,?,?,?)");

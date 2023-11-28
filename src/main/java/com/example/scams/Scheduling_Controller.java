@@ -1,8 +1,5 @@
 package com.example.scams;
 
-import javafx.application.Platform;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -10,17 +7,14 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.Optional;
+import java.time.LocalDate;
 
 public class Scheduling_Controller {
 
@@ -144,17 +138,20 @@ public class Scheduling_Controller {
                 return;
             }
 
-            String EventDate = String.valueOf(eventDate.getValue());
+            LocalDate selectedEventDate = eventDate.getValue();
+            String EventDate = (selectedEventDate != null) ? selectedEventDate.toString() : "";
             if (EventDate.isEmpty()) {
                 showAlert("Event date is required");
                 return;
             }
 
+
             String ClubID = clubID.getValue();
-            if(ClubID.isEmpty())
-            {
+            if (ClubID == null || ClubID.isEmpty()) {
                 showAlert("ClubID is required");
+                return;
             }
+
 
             PreparedStatement pat = con.prepareStatement( "INSERT INTO events(Event_ID, Event_Name, Event_Date, Club_ID) VALUES(?,?,?,?)");
             pat.setString(1, EventId);
