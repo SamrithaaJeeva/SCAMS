@@ -64,25 +64,25 @@ public class Club_Controller
 
             String clubIDText= ClubID.getText();
             if (clubIDText.isEmpty()||!clubIDText.matches("\\d+")) {
-                showAlert("Event ID is not valid");
+                showAlert("Club ID is not valid");
                 return;
             }
             String clubNameText = ClubName.getText();
             if (clubNameText.isEmpty()) {
-                showAlert("Event Name is not valid");
+                showAlert("Club Name is required");
                 return;
             }
 
             String Advisorname = AdvisorName.getText();
             if (Advisorname.isEmpty()) {
-                showAlert("Event date is required");
+                showAlert("Advisor name is required");
                 return;
             }
 
             String descriptionValue = Description.getText();
             if(descriptionValue.isEmpty())
             {
-                showAlert("ClubID is required");
+                showAlert("Club description is required");
             }
 
             PreparedStatement pat = con.prepareStatement( "INSERT INTO `club`(`Club_ID`, `Club_Name`, `ClubAdvisor_Name`, `Club_Description`)  VALUES(?,?,?,?)");
@@ -152,7 +152,7 @@ public class Club_Controller
 
             String clubNameText = EditName.getText();
             if (clubNameText.isEmpty()) {
-                showAlert("Club Name is not valid");
+                showAlert("Club Name is required");
                 return;
             }
 
