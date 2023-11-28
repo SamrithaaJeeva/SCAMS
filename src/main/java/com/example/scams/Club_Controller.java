@@ -90,7 +90,7 @@ public class Club_Controller
             }
 
             String clubIdText = EditID.getValue();
-            if (clubIdText.isEmpty()) {
+            if (clubIdText==null||clubIdText.isEmpty()) {
                 showAlert("Club ID is not valid");
                 return;
             }
@@ -112,16 +112,18 @@ public class Club_Controller
                 showAlert("Description is required");
                 return;
             }
+            if (EditID!=null&&EditName!=null&&EditAdvisorName!=null&& EditDescription!=null) {
 
-            String updateQuery = "UPDATE club SET Club_Name = ?, ClubAdvisor_Name = ?, Club_Description = ? WHERE Club_ID = ?";
-            PreparedStatement pat = con.prepareStatement(updateQuery);
+                String updateQuery = "UPDATE club SET Club_Name = ?, ClubAdvisor_Name = ?, Club_Description = ? WHERE Club_ID = ?";
+                PreparedStatement pat = con.prepareStatement(updateQuery);
 
-            pat.setString(1, clubNameText);
-            pat.setString(2, advisorNameText);
-            pat.setString(3, descriptionText);
-            pat.setString(4, clubIdText);
+                pat.setString(1, clubNameText);
+                pat.setString(2, advisorNameText);
+                pat.setString(3, descriptionText);
+                pat.setString(4, clubIdText);
 
-            int rowsAffected = pat.executeUpdate();
+                int rowsAffected = pat.executeUpdate();
+
 
             if (rowsAffected > 0) {
                 System.out.println("Record updated successfully");
@@ -129,7 +131,7 @@ public class Club_Controller
                 System.out.println("No record updated");
             }
 
-            showAlert("Club Edited Successfully");
+            showAlert("Club Edited Successfully");}
 
         } catch (SQLException e) {
             e.printStackTrace();

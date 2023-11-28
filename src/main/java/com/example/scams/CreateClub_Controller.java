@@ -69,23 +69,22 @@ public class CreateClub_Controller {
             }
 
             String descriptionValue = Description.getText();
-            if(descriptionValue.isEmpty())
-            {
+            if(descriptionValue.isEmpty()) {
                 showAlert("Club description is required");
+                return;
             }
 
-            PreparedStatement pat = con.prepareStatement( "INSERT INTO `club`(`Club_ID`, `Club_Name`, `ClubAdvisor_Name`, `Club_Description`)  VALUES(?,?,?,?)");
-            pat.setString(1, clubIDText);
-            pat.setString(2, clubNameText);
-            pat.setString(3, Advisorname);
-            pat.setString(4, descriptionValue);
-
-            pat.executeUpdate();
-
-            System.out.println("Record added");
-
-            showAlert("Club created successfully");
-
+            if (clubIDText!=null&&clubNameText!=null&&Advisorname!=null&& descriptionValue!=null)
+            {
+                PreparedStatement pat = con.prepareStatement( "INSERT INTO `club`(`Club_ID`, `Club_Name`, `ClubAdvisor_Name`, `Club_Description`)  VALUES(?,?,?,?)");
+                pat.setString(1, clubIDText);
+                pat.setString(2, clubNameText);
+                pat.setString(3, Advisorname);
+                pat.setString(4, descriptionValue);
+                pat.executeUpdate();
+                System.out.println("Record added");
+                showAlert("Club created successfully");
+            } else{System.out.println("Error");}
             ClubID.clear();
             ClubName.clear();
             AdvisorName.clear();
