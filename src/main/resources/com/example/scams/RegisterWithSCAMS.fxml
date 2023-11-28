@@ -58,7 +58,7 @@
                         <Image url="@../../../backicon.jpeg" />
                     </image>
                 </ImageView>
-                <Button fx:id="back_button" layoutX="2.0" layoutY="6.0" mnemonicParsing="false" onAction="#navigateToHome" prefHeight="49.0" prefWidth="122.0" style="-fx-background-color: transparent;" />
+                <Button fx:id="back_button" layoutY="2.0" mnemonicParsing="false" onAction="#navigateToHome" prefHeight="58.0" prefWidth="122.0" style="-fx-background-color: transparent;" />
             </children>
         </AnchorPane>
         <Label layoutX="296.0" layoutY="400.0" prefHeight="22.0" prefWidth="82.0" text="Choose Club">
@@ -66,7 +66,7 @@
                 <Font name="System Italic" size="13.0" />
             </font>
         </Label>
-        <Button fx:id="view_club" layoutX="241.0" layoutY="485.0" mnemonicParsing="false" onAction="#viewClub" style="-fx-background-color: black;" text="VIEW CLUBS" textFill="#eb92b8" />
+        <Button layoutX="241.0" layoutY="485.0" mnemonicParsing="false" onAction="#viewClub" style="-fx-background-color: black;" text="VIEW CLUBS" textFill="#eb92b8" />
         <Label layoutX="286.0" layoutY="310.0" style="-fx-background-color: #F4ACB7;" text="Confirm Password">
             <font>
                 <Font name="System Italic" size="13.0" />

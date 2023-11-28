@@ -5,14 +5,21 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+
 
 public class viewclubs_Controller {
     @FXML
@@ -29,6 +36,10 @@ public class viewclubs_Controller {
 
     @FXML
     private TableColumn<Clubs, String> advisornameolumn;
+
+    private Stage stage;
+    private Scene scene;
+    private Parent root;
 
 
     @FXML
@@ -77,6 +88,16 @@ public class viewclubs_Controller {
             System.out.println("Error here");
             e.printStackTrace();
         }
+    }
+    @FXML
+    private void navigateToHome(ActionEvent event)throws IOException {
+        // Load the new FXML file (assuming "home.fxml")
+
+        Parent root = FXMLLoader.load(getClass().getResource("SignWithSCAMS.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene=new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 
 
