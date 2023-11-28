@@ -82,9 +82,9 @@
                 <Button layoutX="290.0" layoutY="483.0" mnemonicParsing="false" onAction="#submit" prefHeight="41.0" prefWidth="123.0" text="Submit" />
                 <AnchorPane layoutY="-1.0" prefHeight="114.0" prefWidth="501.0" style="-fx-background-color: black;">
                     <children>
-                        <Label layoutX="202.0" layoutY="13.0" prefHeight="81.0" prefWidth="260.0" text="        SCHEDULE MEETING" textAlignment="CENTER" textFill="#eb94b9">
+                        <Label layoutX="202.0" layoutY="13.0" prefHeight="90.0" prefWidth="290.0" text="        SCHEDULE MEETING" textAlignment="CENTER" textFill="#eb94b9">
                             <font>
-                                <Font name="System Bold" size="24.0" />
+                                <Font name="System Bold" size="22.0" />
                             </font>
                         </Label>
                         <ImageView fitHeight="100.0" fitWidth="86.0" layoutX="59.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
