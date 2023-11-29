@@ -3,7 +3,7 @@ import javax.swing.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
 
-public class Connector {
+public class Connector { //Madhunisha
 
     final  static  String driver="com.mysql.cj.jdbc.Driver";
     final  static String database_url="jdbc:mysql://localhost:3306/scams";

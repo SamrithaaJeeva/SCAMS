@@ -1,5 +1,7 @@
 package com.example.scams;
 
+//Neri
+
 public class Events {
     private String EventId;
     private String EventName;

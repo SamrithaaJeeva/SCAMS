@@ -12,6 +12,7 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
+
 <BorderPane fx:id="borderpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="510.0" prefWidth="500.0" style="-fx-border-color: #785b57;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.scams.Controller">
    <center>
         <AnchorPane maxWidth="616.0" minHeight="500.0" minWidth="500.0" prefHeight="529.0" prefWidth="500.0" style="-fx-background-color: #F4ACB7;" BorderPane.alignment="CENTER">

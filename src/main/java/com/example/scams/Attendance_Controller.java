@@ -32,7 +32,7 @@ import java.util.List;
 
 import static java.lang.Class.forName;
 
-public class Attendance_Controller extends Component {
+public class Attendance_Controller extends Component { //Madhunisha
     private Stage stage;
     private Scene scene;
 

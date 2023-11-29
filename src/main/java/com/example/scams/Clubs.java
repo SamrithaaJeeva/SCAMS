@@ -1,6 +1,6 @@
 package com.example.scams;
 
-public class Clubs {
+public class Clubs {  //AMA
 
     private String ClubID;
     private String ClubName;

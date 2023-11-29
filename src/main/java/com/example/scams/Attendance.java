@@ -2,7 +2,7 @@ package com.example.scams;
 
 import java.util.Objects;
 
-public class Attendance {
+public class Attendance { //Madhunisha
        private student studentName;
        private String attendance;
        private String type; //

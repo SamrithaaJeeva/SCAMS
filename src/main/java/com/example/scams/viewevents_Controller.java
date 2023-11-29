@@ -21,6 +21,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+//Neri
 public class viewevents_Controller {
     //Navigation bar
     private Stage stage;
