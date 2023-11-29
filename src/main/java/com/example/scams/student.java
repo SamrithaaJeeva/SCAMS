@@ -25,15 +25,13 @@ public class student {
 
     // Getters and setters
 
-    public String getStudentID() {
-        return studentID;
-    }
-
+    public String getStudentID() { return studentID;}
     public String getStudentName() {
         return studentName;
     }
     public String getStudentPass(){return studentPass;}
-    public Clubs getClubName() { return clubName;}
+    public Clubs getClubName() { return clubName;
+    }
 
 
     public void setStudentID(String studentID) {

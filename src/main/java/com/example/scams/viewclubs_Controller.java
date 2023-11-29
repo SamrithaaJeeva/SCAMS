@@ -93,7 +93,7 @@ public class viewclubs_Controller {
     private void navigateToHome(ActionEvent event)throws IOException {
         // Load the new FXML file (assuming "home.fxml")
 
-        Parent root = FXMLLoader.load(getClass().getResource("SignWithSCAMS.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("Home.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene=new Scene(root);
         stage.setScene(scene);
