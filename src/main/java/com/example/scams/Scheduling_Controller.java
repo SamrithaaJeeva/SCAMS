@@ -166,6 +166,12 @@ public class Scheduling_Controller {
             // Show a success popup
             showAlert("Event added successfully!");
 
+            // Clear the input fields
+            eventId.clear();
+            eventName.clear();
+            eventDate.setValue(null); // Reset the date picker
+            clubID.getSelectionModel().clearSelection(); // Clear the selected club
+
 
         } catch (SQLException e) {
             e.printStackTrace();

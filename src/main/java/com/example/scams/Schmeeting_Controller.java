@@ -167,6 +167,12 @@ public class Schmeeting_Controller {
             // Show a success popup
             showAlert("Meeting added successfully!");
 
+            // Clear the input fields
+            meetingId.clear();
+            meetingName.clear();
+            meetingDate.setValue(null); // Reset the date picker
+            clubID.getSelectionModel().clearSelection(); // Clear the selected club
+
         } catch (SQLException e) {
             e.printStackTrace();
         }
