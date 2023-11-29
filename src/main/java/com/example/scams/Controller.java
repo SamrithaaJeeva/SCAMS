@@ -12,7 +12,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class Controller {
+public class Controller { //Madhunisha
     private Stage stage;
     private Scene scene;
     private Parent root;
