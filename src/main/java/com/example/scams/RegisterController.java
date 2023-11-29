@@ -143,6 +143,7 @@ public class RegisterController {
             preparedStatement.executeUpdate();
 
             System.out.println("Data inserted successfully.");
+            showAlert("Succesful","You have succesfully registered");
 
         } catch (SQLException e) {
             e.printStackTrace();
