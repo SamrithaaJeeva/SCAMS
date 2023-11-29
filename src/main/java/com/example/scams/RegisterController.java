@@ -24,7 +24,7 @@ import javafx.scene.control.Alert.AlertType;
 import java.io.IOException;
 
 
-public class RegisterController {
+public class RegisterController { //Samrithaa
     //controller
 
     @FXML

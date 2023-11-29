@@ -18,7 +18,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 
 
-public class SignController {
+public class SignController { //Samrithaa
 
     @FXML
     private TextField studentID;

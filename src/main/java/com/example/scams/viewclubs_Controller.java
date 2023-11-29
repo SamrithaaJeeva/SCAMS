@@ -1,5 +1,4 @@
 package com.example.scams;
-
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -21,7 +20,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 
-public class viewclubs_Controller {
+public class viewclubs_Controller { //Samrithaa
     @FXML
     private TableView<Clubs> clubtable;
 
