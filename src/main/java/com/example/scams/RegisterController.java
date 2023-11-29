@@ -93,10 +93,11 @@ public class RegisterController {
         String confirmPassword = confirmPass.getText();
         String selectedClub = clubChoiceBox.getValue();
 
-
-
-
-
+        // Validate other fields as needed (e.g., non-empty, length, format, etc.)
+        if (id.isEmpty() || name.isEmpty()) {
+            showAlert("Error", "Please fill in all required fields.");
+            return;
+        }
         // Validate passwords
         if (password.isEmpty() || !password.equals(confirmPassword)) {
             showAlert("Error", "Password is empty or passwords do not match. Please re-enter.");
@@ -108,11 +109,7 @@ public class RegisterController {
             showAlert("Error", "Please select a club.");
             return;
         }
-        // Validate other fields as needed (e.g., non-empty, length, format, etc.)
-        if (id.isEmpty() || name.isEmpty()) {
-            showAlert("Error", "Please fill in all required fields.");
-            return;
-        }
+
 
         // Store the data in the database
         saveToDatabase(id, name, password, selectedClub);
