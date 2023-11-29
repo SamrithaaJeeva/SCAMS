@@ -4,9 +4,11 @@ public class student {
     private String studentID;
     private String studentName;
     private String studentPass;
-    private String clubName; //change to club
+    private Clubs clubName; //change to club
 
-    public student(String studentID, String studentName, String studentPass, String clubName) {
+
+
+    public student(String studentID, String studentName, String studentPass, Clubs clubName) {
         this.studentID = studentID;
         this.studentName = studentName;
         this.studentPass= studentPass;
@@ -31,7 +33,7 @@ public class student {
         return studentName;
     }
     public String getStudentPass(){return studentPass;}
-    public String getClubName(){return clubName;}
+    public Clubs getClubName() { return clubName;}
 
 
     public void setStudentID(String studentID) {
@@ -45,9 +47,9 @@ public class student {
     public void setStudentPass(String studentPass) {
         this.studentName = studentPass;
     }
-    public void setClubName(String clubName) {
-        this.clubName = clubName;
-    }
+    public void setClubName(Clubs clubName) { this.clubName = clubName; }
+
+
 
 
 
