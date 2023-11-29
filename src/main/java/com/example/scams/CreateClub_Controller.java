@@ -16,7 +16,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-public class CreateClub_Controller {
+public class CreateClub_Controller {    //AMA
 
     private Stage stage;
     private Scene scene;
