@@ -20,7 +20,7 @@ import java.sql.SQLException;
 
 import static com.example.scams.Connector.password;
 
-public class Club_Controller
+public class Club_Controller  // AMA
 
 {
     private Stage stage;
